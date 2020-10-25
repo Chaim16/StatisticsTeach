@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.jplus.mapper.ZlgcMapper">
+
+    <resultMap id="zlgcInfo" type="org.jplus.pojo.zlgc.Zlgc">
+        <id property="zlgcid" column="zlgcid" jdbcType="INTEGER"></id>
+        <result property="gh" column="gh" jdbcType="CHAR"></result>
+        <result property="nd" column="nd" jdbcType="INTEGER"></result>
+        <result property="xmmc" column="xmmc" jdbcType="VARCHAR"></result>
+        <result property="jb" column="jb" jdbcType="INTEGER"></result>
+        <result property="xmpm" column="xmpm" jdbcType="INTEGER"></result>
+        <result property="zrs" column="zrs" jdbcType="INTEGER"></result>
+        <result property="gzl" column="gzl" jdbcType="FLOAT"></result>
+        <association property="zlgcxmlx" javaType="org.jplus.pojo.zlgc.Zlgcxmlx">
+            <result property="xmlxbm" column="xmlxbm" jdbcType="INTEGER"></result>
+            <result property="xmlxmc" column="xmlxmc" jdbcType="VARCHAR"></result>
+        </association>
+
+    </resultMap>
+
+    <insert id="addZlgcInfo" parameterType="org.jplus.pojo.zlgc.ZlgcAccept">
+        insert into zlgc(
+        gh,
+        nd,
+        lxbm,
+        xmmc,
+        jb,
+        xmpm,
+        zrs,
+        gzl
+        )
+        values (
+        #{gh,jdbcType=CHAR} ,
+        #{nd,jdbcType=INTEGER} ,
+        #{xmlxbm,jdbcType=INTEGER} ,
+        #{xmmc,jdbcType=VARCHAR},
+        #{jb,jdbcType=INTEGER} ,
+        #{xmpm,jdbcType=INTEGER} ,
+        #{zrs,jdbcType=INTEGER},
+        #{gzl,jdbcType=FLOAT}
+        )
+    </insert>
+
+    <delete id="deleteZlgcInfoById">
+        delete from `zlgc` where zlgcid = #{zlgcid,jdbcType=INTEGER}
+    </delete>
+
+    <select id="getZlgcInfo" resultMap="zlgcInfo">
+        SELECT
+        zlgcid,
+        k.xmlxbm,
+        k.xmlxmc,
+        xmmc,
+        gh,
+        jb,
+        nd,
+        xmpm,
+        zrs,
+        gzl
+        from `zlgc` as b
+        left join `zlgcxmlx` as k
+        on b.lxbm = k.xmlxbm
+        where gh = #{gh,jdbcType=CHAR} and nd = #{year, jdbcType=INTEGER}
+    </select>
+    <!--根据ID取一条数据-->
+    <select id="getOneZlgcInfo" resultMap="zlgcInfo">
+        SELECT
+        gh,
+        zlgcid,
+        k.xmlxbm,
+        xmmc,
+        jb,
+        nd,
+        xmpm,
+        zrs,
+        gzl
+        from `zlgc` as b
+        left join `zlgcxmlx` as k
+        on b.lxbm = k.xmlxbm
+        where zlgcid = #{zlgcid,jdbcType=INTEGER}
+    </select>
+
+    <update id="updateZlgcInfoById">
+        update `zlgc` set
+        lxbm = #{xmlxbm,jdbcType=INTEGER} ,
+        xmmc = #{xmmc,jdbcType=VARCHAR} ,
+        jb = #{jb,jdbcType=INTEGER} ,
+        nd = #{nd,jdbcType=INTEGER} ,
+        xmpm = #{xmpm,jdbcType=INTEGER},
+        zrs = #{zrs,jdbcType=INTEGER}
+        where zlgcid = #{zlgcid,jdbcType=INTEGER}
+    </update>
+
+    <select id="calculateSumOfWorkLoad" resultType="java.lang.Float">
+        select
+        SUM(gzl)
+        from zlgc
+        where gh = #{gh,jdbcType=CHAR} and nd = #{xqnd,jdbcType=INTEGER}
+    </select>
+</mapper>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js " xmlns:th="http://www.thymeleaf.org">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title></title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- 加载bootstrap -->
+    <link rel='stylesheet' href='https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css' />
+    <script src='https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js'></script>
+    <script src='https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <!--    加载jq-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- 引用bootstrap及基础样式 -->
+    <script src="js/link.js"></script>
+    <link rel="stylesheet" href="css/qualityengineering.css"/>
+    <link rel="stylesheet" href="css/tablestyle.css"/>
+    <!--    输入框验证-->
+    <script src="js/classroomteaching.js"></script>
+    <!--    提交年度-->
+    <script src="js/submit.js"></script>
+
+</head>
+
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">
+    You are using an <strong>outdated</strong> browser. Please
+    <a href="#">upgrade your browser</a> to improve your experience.
+</p>
+<![endif]-->
+<!-- 头部 -->
+<script src="js/titleandnav.js"></script>
+<!-- 左边导航栏 -->
+<div class="main">
+    <div class="navbar" id="navwrap">
+        <div class="navwarp">
+            <div class="basic-information">
+                <a th:href="@{/basicinformation}">教师本年度基本信息</a>
+            </div>
+            <!-- 本科生 -->
+            <div id="bachelor">本科生</div>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a th:href="@{/classroomteaching}" >课堂教学</a>
+                </li>
+                <li class="list-group-item">
+                    <a th:href="@{/practiceteh}">实践教学</a>
+                </li>
+                <li class="list-group-item active"><a th:href="@{/qualityengineering}">质量工程建设</a></li>
+                <li class="list-group-item"><a th:href="@{/teachingresearch}">教学研究</a></li>
+                <li class="list-group-item"><a th:href="@{/know}">教学竞赛获奖</a></li>
+                <li class="list-group-item"><a th:href="@{/other}">其它教育教学活动</a></li>
+                <li>
+                    <button type="button" id="Submitbtn1" data-toggle="modal" data-target="#Submission1">提交本科生教学工作量</button>
+                </li>
+            </ul>
+<!--
+            &lt;!&ndash; 研究生 &ndash;&gt;
+            <div id="postgraduate">研究生</div>
+            <ul class="list-group">
+                <li class="list-group-item"><a th:href="@{/graduateclass}">课堂教学</a></li>
+                <li class="list-group-item"><a th:href="@{/graduatepractice}">实践教学</a></li>
+                <li class="list-group-item"><a th:href="@{/graduateconstruction}">教学基本建设与学科建设</a></li>
+                <li class="list-group-item"><a th:href="@{/graduateprogram}">教学研究项目</a></li>
+                <li class="list-group-item"><a th:href="@{/masterKnow}">指导研究生竞赛获奖</a></li>
+                <li class="list-group-item"><a th:href="@{/masterOther}">其它工作</a></li>
+                <li>
+                    <button type="button" id="Submitbtn2" data-toggle="modal" data-target="#Submission2">提交本科生教学工作量</button>
+                </li>
+            </ul>
+-->
+
+        </div>
+    </div>
+    <!-- 模态框-本科生是否提交 -->
+    <div class="modal fade" id="Submission1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="tips">
+                        <div>提示：</div>
+                        <div style=" text-indent: 2em;">本年度本科生工作量提交以后，就不能修改。如果提交后需要修改，请让分管本科生的教学秘书做撤回操作。</div>
+                    </div>
+                    <div class="btn-submitted">
+                        <a th:href="@{/submitBks}"><button type="button" id="submitted1">继续提交</button></a>
+                        <button type="button" id="notsubmitted1" data-dismiss="modal">不提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    &lt;!&ndash; 模态框-研究生是否提交 &ndash;&gt;
+    <div class="modal fade" id="Submission2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="tips">
+                        <div>提示：</div>
+                        <div style=" text-indent: 2em;">本年度研究生工作量提交以后，就不能修改。如果提交后需要修改，请让分管研究生的教学秘书做撤回操作。</div>
+                    </div>
+                    <div class="btn-submitted">
+                        <a th:href="@{/submitYjs}"><button type="button" id="submitted2">继续提交</button></a>
+                        <button type="button" id="notsubmitted2" data-dismiss="modal">不提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+</div>
+<!-- 质量工程部分 -->
+<div class="informationwarp" id="informationwarp">
+    <!-- 标题 -->
+    <div class="teaching-title">本科生质量工程工作量</div>
+    <div class="msg-warp">
+        <!-- 提示信息栏 -->
+        <div class="msg">
+<!--            <div class="year">年度<span th:text="${year}"></span></div>-->
+
+            <form th:action="@{/selectQualityEngineerByYear}" method="post" th:object="${xqnd}" id="selectYear">
+                <div class="year">
+                    <span class="passwordtip" style="letter-spacing: 30px;">年度</span>
+                    <select id="years" onchange="submitForm();" name="xqnd" class="teather-name">
+                        <option th:each="year:${years}" th:selected="${xqnd} == ${year}" th:value="${year}" th:text="${year}"></option>
+                    </select>
+                </div>
+            </form>
+
+
+            <div class="total-workload">质量工程工作量总计<span th:text="${sumOfWorkload}">0</span></div>
+            <!-- Button trigger modal -->
+            <span th:if="${hidden==0}">
+                <button type="button" id="save" data-toggle="modal" data-target="#myModal">
+                添加
+                </button>
+            </span>
+        </div>
+        <!-- 模态框（Modal）界面 -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h5 class="modal-title" id="myModalLabel" style="text-align: center;">
+                            质量工程新增
+                        </h5>
+                    </div>
+                    <div class="modal-body">
+                        <form th:action="@{/addZlgc}" method="post">
+                            <div>
+                                <span class="meter">项目类型：</span>
+                                <select th:name="xmlxbm">
+                                    <option th:name="xmlxbm" th:value="${1}">一流专业</option>
+                                    <option th:name="xmlxbm" th:value="${2}">金课</option>
+                                    <option th:name="xmlxbm" th:value="${3}">品牌及特色专业</option>
+                                    <option th:name="xmlxbm" th:value="${4}">教学团队</option>
+                                    <option th:name="xmlxbm" th:value="${5}">实验教学中心</option>
+                                    <option th:name="xmlxbm" th:value="${6}">优质/精品课程</option>
+                                    <option th:name="xmlxbm" th:value="${7}">在线课程</option>
+                                    <option th:name="xmlxbm" th:value="${8}">资源共享</option>
+                                    <option th:name="xmlxbm" th:value="${9}">视频公开课程</option>
+                                    <option th:name="xmlxbm" th:value="${10}">大学生创新创业基地</option>
+                                    <option th:name="xmlxbm" th:value="${11}">大学生实习实训基地</option>
+                                    <option th:name="xmlxbm" th:value="${12}">湖北名师工作室</option>
+                                    <option th:name="xmlxbm" th:value="${13}">其它新增教学质量工程</option>
+                                </select>
+                            </div>
+                            <div th:name="xmmc">
+                                <span class="meter">项目名称：</span><input type="text" th:name="xmmc" class="form-control-1 form-control-jub class-name"
+                                            placeholder=""/>
+                            </div>
+                            <div class="warning">项目名称不能为空！</div>
+                            <div>
+                                <span class="meter"><span class="passwordtip" style="letter-spacing: 30px;">级</span>别：</span>
+                                <select th:name="jb">
+                                    <option th:name="jb" th:value="${1}">国家级</option>
+                                    <option th:name="jb" th:value="${2}">省级</option>
+                                </select>
+                            </div>
+
+<!--                            <div th:name="nd">
+                                <span class="meter">获批(奖)年度：</span><input type="text" th:name="nd" class="form-control-1 form-control-jub class-name" placeholder=""/>
+                            </div>
+                            <div class="warning">获批(奖)年度不能为空！</div>-->
+                            <div th:name="xmpm">
+                                <span class="meter">项目排名：</span><input type="text" th:name="xmpm" class="form-control-1 form-control-jub timenum" placeholder=""/>
+                            </div>
+                            <div class="warning">项目排名不能为空！</div>
+                            <div th:name="zrs">
+                                <span class="meter">项目总人数：</span><input type="text" th:name="zrs" class="form-control-1 form-control-jub timenum" placeholder=""/>
+                            </div>
+                            <div class="warning">项目总人数不能为空！</div>
+                            <div class="btn-add">
+                                <button type="submit" class="add">添加</button>
+                                <button type="button" class="cancel" data-dismiss="modal">取消</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-wrap">
+            <!-- 表格数据 -->
+            <!--文章列表-->
+            <table class="table table-bordered edtitable">
+                <thead>
+                <tr>
+                    <th>项目类型</th>
+                    <th>项目名称</th>
+                    <th>级别</th>
+                    <th>获批(奖)年份</th>
+                    <th>项目排名</th>
+                    <th>项目总人数</th>
+                    <th>工作量</th>
+                    <span th:if="${hidden==0}" >
+                        <th colspan="2">操作</th>
+                    </span>
+                </tr>
+                </thead>
+                <!---->
+                <tbody class="tbody" id="tbody">
+                <tr th:each="zlgcInfo : ${zlgc}">
+
+                    <td hidden>
+                        <input hidden th:name="zlgcid" th:value="${zlgcInfo.zlgcid}">
+                    </td>
+                    <td th:text="${zlgcInfo.zlgcxmlx.xmlxmc}"></td>
+                    <td th:text="${zlgcInfo.xmmc}"></td>
+                    <td th:text="${zlgcInfo.jb == 1 ? '国家级' : '省级'}"></td>
+                    <td th:text="${zlgcInfo.nd}"></td>
+                    <td th:text="${zlgcInfo.xmpm}"></td>
+                    <td th:text="${zlgcInfo.zrs}"></td>
+                    <td th:text="${zlgcInfo.gzl}"></td>
+                    <!-- TODO : 点击修改，首先将表格中的数据读到一个地方，然后再将数据取出放到静态模框中 -->
+                    <!--<td class="notedit"><a class="modify" data-toggle="modal" data-target="#modifyModal">修 改</a></td>-->
+                    <span th:if="${hidden==0}" >
+                    <td><a th:href="@{/deleteZlgcInfo(id=${zlgcInfo.zlgcid})}" type="submit" class="delete">删 除</a></td>
+                    </span>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="" async defer></script>
+</body>
+</html>

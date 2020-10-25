@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 加载bootstrap -->
+    <link rel='stylesheet' href='https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css' />
+    <script src='https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js'></script>
+    <script src='https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <!--    加载jq-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- 引用bootstrap及基础样式 -->
+    <script src="js/link.js"></script>
+    <!-- 表格样式 -->
+    <link rel="stylesheet" href="css/tablestyle.css" />
+    <link rel="stylesheet" href="css/classroomteaching.css" />
+    <!--    输入框验证-->
+    <script src="js/classroomteaching.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <!-- 头部 -->
+    <script src="js/titleandnav.js"></script>
+    <!-- 左边导航栏 -->
+    <div class="main">
+        <div class="navbar">
+            <div class="navwarp" id="navwrap">
+                <div class="basic-information">
+                    <a th:href="@{/basicinformation}">教师本年度基本信息</a>
+                </div>
+                <!-- 本科生 -->
+                <div id="bachelor">本科生</div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a th:href="@{/classroomteaching}" >课堂教学</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a th:href="@{/practiceteh}">实践教学</a>
+                    </li>
+                    <li class="list-group-item"><a th:href="@{/qualityengineering}">质量工程建设</a></li>
+                    <li class="list-group-item"><a th:href="@{/teachingresearch}">教学研究</a></li>
+                    <li class="list-group-item"><a th:href="@{/know}">教学竞赛获奖</a></li>
+                    <li class="list-group-item"><a th:href="@{/other}">其它教育教学活动</a></li>
+                    <li>
+                        <button type="button" id="Submitbtn1" data-toggle="modal" data-target="#Submission1">提交本科生教学工作量</button>
+                    </li>
+                </ul>
+                <!-- 研究生 -->
+                <div id="postgraduate">研究生</div>
+                <ul class="list-group">
+                    <li class="list-group-item active"><a th:href="@{/graduateclass}">课堂教学</a></li>
+                    <li class="list-group-item"><a th:href="@{/graduatepractice}">实践教学</a></li>
+                    <li class="list-group-item"><a th:href="@{/graduateconstruction}">教学基本建设与学科建设</a></li>
+                    <li class="list-group-item"><a th:href="@{/graduateprogram}">教学研究项目</a></li>
+                    <li class="list-group-item"><a th:href="@{/masterKnow}">指导研究生竞赛获奖</a></li>
+                    <li class="list-group-item"><a th:href="@{/masterOther}">其它工作</a></li>
+                    <li>
+                        <button type="button" id="Submitbtn2" data-toggle="modal" data-target="#Submission2">提交本科生教学工作量</button>
+                    </li>
+                </ul>
+                <!-- 提交按钮 -->
+
+            </div>
+        </div>
+        <!-- 模态框-本科生是否提交 -->
+        <div class="modal fade" id="Submission1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="tips">
+                            <div>提示：</div>
+                            <div style=" text-indent: 2em;">本年度本科生工作量提交以后，就不能修改。如果提交后需要修改，请让分管本科生的教学秘书做撤回操作。</div>
+                        </div>
+                        <div class="btn-submitted">
+                            <a th:href="@{/submitBks}"><button type="button" id="submitted1">继续提交</button></a>
+                            <button type="button" id="notsubmitted1" data-dismiss="modal">不提交</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 模态框-研究生是否提交 -->
+        <div class="modal fade" id="Submission2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="tips">
+                            <div>提示：</div>
+                            <div style=" text-indent: 2em;">本年度研究生工作量提交以后，就不能修改。如果提交后需要修改，请让分管研究生的教学秘书做撤回操作。</div>
+                        </div>
+                        <div class="btn-submitted">
+                            <a th:href="@{/submitYjs}"><button type="button" id="submitted2">继续提交</button></a>
+                            <button type="button" id="notsubmitted2" data-dismiss="modal">不提交</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 课堂教学部分 -->
+    <div class="informationwarp" id="informationwarp">
+        <!-- 标题 -->
+        <div class="teaching-title">研究生课堂教学工作量</div>
+        <div class="msg-warp">
+            <!-- 提示信息栏 -->
+            <div class="msg">
+                <div class="year">年度<span th:text="${year}"></span></div>
+                <div class="total-workload">课堂教学工作量总计<span th:text="${ktjxgzlSum}"></span></div>
+                <!-- 模态框-添加按钮 -->
+                <!-- <input type="button" id="addBtn" value="添 加" /> -->
+                <span th:if="${hidden==0}">
+                    <button type="button" id="save" data-toggle="modal" data-target="#myModal">
+                    添加
+                    </button>
+                </span>
+
+            </div>
+            <!-- 模态框（Modal）登陆界面 -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- 模态框头部 -->
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h5 class="modal-title" id="myModalLabel" style="text-align: center;">
+                                课堂教学新增
+                            </h5>
+                        </div>
+                        <!-- 添加课程内容 -->
+                        <div class="modal-body">
+                            <form th:action="@{/addYjsClassInfo}" method="post">
+                                <div>
+                                    <span class="meter"><span class="passwordtip" style="letter-spacing: 30px;">学</span>期：</span>
+                                    <select th:name="xq">
+                                        <option th:name="xq" th:value="${1}">1</option>
+                                        <option th:name="xq" th:value="${2}">2</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <span class="meter">课程名称：</span><input type="text" th:name="kcmc" class="form-control-1 class-name form-control-jub"  />
+                                </div>
+                                <div class="warning">课程名称不能为空！</div>
+                                <div>
+                                    <span class="meter">课程类型：</span><select th:name="kclx">
+                                    <option th:name="kclx" th:each="ktlxType:${yjskclx}" th:value="${ktlxType.kclxbm}"
+                                            th:text="${ktlxType.kclxmc}"
+                                    ></option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <span class="meter">授课对象：</span><input type="text" th:name="skdx" class="form-control-1 class-number form-control-jub"  />
+                                </div>
+                                <div class="warning">授课对象不能为空！</div>
+                                <div th:name="jhxs">
+                                    <span class="meter">计划学时：</span><input type="text" th:name="jhxs" class="form-control-1 form-control-jub timenum"  />
+                                </div>
+                                <div class="warning">计划学时不能为空！</div>
+                                <div th:name="skrs">
+                                    <span class="meter">上课人数：</span><input type="text" th:name="skrs" class="form-control-1 form-control-jub timenum"  />
+                                </div>
+                                <div class="warning">上课人数不能为空！</div>
+                                <div class="btn-add">
+                                    <button type="submit" class="add">添加</button>
+                                    <button type="button" class="cancel" data-dismiss="modal">
+                                        取消
+                                    </button>
+                                </div>
+                                <span th:if="${GClassError}">
+                                    <script th:inline="javascript">
+                                        var GclassError =/*[[${GClassError}]]*/"!"
+                                        alert(GclassError);
+                                    </script>
+                                </span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-wrap">
+                <!-- 表格数据 -->
+                <!--文章列表-->
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>学期</th>
+                            <th>课程名称</th>
+                            <th>课程类型</th>
+                            <th>授课对象</th>
+                            <th>计划学时</th>
+                            <th>上课人数</th>
+                            <th>教学工作量</th>
+                            <th colspan="2">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody" id="tbody" >
+                        <tr th:each="yjs : ${yjsktjx}">
+                            <td th:text="${yjs.xq}"></td>
+                            <td th:text="${yjs.kcmc}"></td>
+                            <td th:text="${yjs.kclx.kclxmc}"></td>
+                            <td th:text="${yjs.skdx}"></td>
+                            <td th:text="${yjs.jhxs}"></td>
+                            <td th:text="${yjs.skrs}"></td>
+                            <td th:text="${yjs.gzl}"></td>
+<!--                            <td class="notedit">560001</td>-->
+                            <!-- 删除按钮 -->
+                            <td class="del-col notedit">
+                                <a th:href="@{/deleteYjsClassInfo(id=${yjs.yjsktjx})}" type="submit" class="delBtn">删除</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="" async defer></script>
+</body>
+
+</html>

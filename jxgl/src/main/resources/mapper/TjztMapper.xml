@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.jplus.mapper.TjztMapper">
+
+    <select id="getTjzt" resultType="org.jplus.pojo.Tjzt.Tjzt">
+        select
+        tijzid,
+        gh,
+        bkstjzt,
+        bkstjsj,
+        bksshzt,
+        yxbksshrxm,
+        yxbksshsj,
+        jwcshrxm,
+        jwcshsj,
+        yjstjzt,
+        yjstjsj,
+        yjsshzt,
+        yxyjsshrxm,
+        yxyjsshsj,
+        yjscshrxm,
+        yjscshsj
+        from `tjzt`
+        where gh = #{gh}
+    </select>
+    <insert id="addTjzt">
+        insert into
+        `tjzt`(gh,bkstjzt,bksshzt,yjstjzt,yjsshzt)
+        values
+        (#{gh},#{bkstjzt},#{bksshzt},#{yjstjzt},#{yjsshzt})
+    </insert>
+    <update id="updateBksTjzt">
+        update tjzt set
+        bkstjzt = 1,
+        bkstjsj = #{bkstjsj,jdbcType=DATE},
+        bksshzt = 1
+        where gh=#{gh}
+    </update>
+    <update id="updateYjsTjzt">
+        update tjzt set
+        yjstjzt = 1,
+        yjstjsj = #{yjstjsj,jdbcType=DATE},
+        yjsshzt = 1
+        where gh=#{gh}
+    </update>
+    <select id="insertTJB" statementType="CALLABLE">
+        CALL proc_tj(#{param1},#{param2})
+    </select>
+</mapper>

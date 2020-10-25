@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.jplus.mapper.CheckgzlMapper">
+    <select id="getYxByGh" resultType="String">
+        SELECT yxmc FROM yxbm WHERE yxbm = (SELECT yxbm FROM users WHERE gh = #{gh})
+    </select>
+
+    <select id="getYxbmByGh" resultType="java.lang.Integer">
+        SELECT yxbm FROM  users WHERE gh = #{gh}
+    </select>
+
+    <select id="getCheckgzlInfByGh" resultType="org.jplus.pojo.checkgzl.Checkgzl">
+               SELECT
+	              jbxx.gh,
+	              users.uname,
+	              jbxx.edgzl,
+	              zwbm.zwmc,
+	              tjb.bkszgzl,
+	              tjb.yjszgzl,
+	              tjzt.bksshzt,
+	              tjzt.bkstjzt,
+	              tjzt.yjsshzt,
+	              tjzt.yjstjzt
+                FROM
+	                users
+                LEFT JOIN jbxx ON jbxx.gh = users.gh
+                LEFT JOIN zwbm ON jbxx.zwbm = zwbm.zwbm
+                LEFT JOIN tjb ON tjb.gh = users.gh
+                LEFT JOIN tjzt ON tjzt.gh = users.gh
+                WHERE jbxx.yxbm = (SELECT yxbm FROM users WHERE gh = #{gh})
+    </select>
+
+    <select id="getAllYxbm" resultType="org.jplus.pojo.basisInfo.Yxbm">
+        SELECT * FROM yxbm WHERE yxbm != 22 and yxbm !=21
+    </select>
+
+
+    <select id="getCheckgzlInfByYxbm" resultType="org.jplus.pojo.checkgzl.Checkgzl">
+                 SELECT
+	              jbxx.gh,
+	              users.uname,
+	              jbxx.edgzl,
+	              zwbm.zwmc,
+	              tjb.bkszgzl,
+	              tjb.yjszgzl,
+	              tjzt.bksshzt,
+	              tjzt.bkstjzt,
+	              tjzt.yjsshzt,
+	              tjzt.yjstjzt
+                FROM
+	                users
+                LEFT JOIN jbxx ON jbxx.gh = users.gh
+                LEFT JOIN zwbm ON jbxx.zwbm = zwbm.zwbm
+                LEFT JOIN tjb ON tjb.gh = users.gh
+                LEFT JOIN tjzt ON tjzt.gh = users.gh
+                WHERE jbxx.yxbm = #{yxbm}
+    </select>
+
+    <select id="getAllCheckgzlInf" resultType="org.jplus.pojo.checkgzl.Checkgzl">
+                 SELECT
+	              jbxx.gh,
+	              users.uname,
+	              jbxx.edgzl,
+	              zwbm.zwmc,
+	              tjb.bkszgzl,
+	              tjb.yjszgzl,
+	              tjzt.bksshzt,
+	              tjzt.bkstjzt
+                FROM
+	                users
+                INNER JOIN jbxx ON jbxx.gh = users.gh
+                LEFT JOIN zwbm ON jbxx.zwbm = zwbm.zwbm
+                LEFT JOIN tjb ON tjb.gh = users.gh
+                LEFT JOIN tjzt ON tjzt.gh = users.gh
+    </select>
+
+</mapper>

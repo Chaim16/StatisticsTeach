@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: 123456
+Build-Jdk: 1.8.0_261
+Implementation-Version: 1.0
+Implementation-Vendor-Id: org.jplus
+Main-Class: ${start-class}
+

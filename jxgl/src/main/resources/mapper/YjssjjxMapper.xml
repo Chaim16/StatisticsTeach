@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.jplus.mapper.YjssjjxMapper">
+
+    <select id="getSjlx" resultType="org.jplus.pojo.yjssjjx.Yjssxlxbm">
+        select
+        yjssxlxbm,
+        yjssxlxmc
+        from `yjssxlxbm`
+    </select>
+
+    <insert id="addYjssjjxInfo">
+        insert into
+        `yjssjjx`
+        (gh,zdxshdcs,rcgzl,gzl)
+        values (#{gh},0.0,0.0,0.0)
+    </insert>
+    <update id="updateYjsSxJbxx">
+        update `yjssjjx` set
+        nd = #{nd},
+        sjlxbm1 = #{sjlxbm1},
+        sjts1 = #{sjts1},
+        sjlxbm2 = #{sjlxbm2},
+        sjts2 = #{sjts2},
+        sjlxbm3 = #{sjlxbm3},
+        sjts3 = #{sjts3},
+        zdxshdcs = #{zdxshdcs},
+        rcgzsm = #{rcgzsm},
+        rcgzl = #{rcgzl},
+        gzl = #{gzl}
+        where gh = #{gh}
+    </update>
+    <select id="getYjssjjxJbxx" resultType="org.jplus.pojo.yjssjjx.Yjssjjx">
+        select
+        yjssjjxid,
+        gh,
+        nd,
+        sjlxbm1,
+        sjts1,
+        sjlxbm2,
+        sjts2,
+        sjlxbm3,
+        sjts3,
+        zdxshdcs,
+        rcgzsm,
+        rcgzl,
+        gzl
+        from `yjssjjx`
+        where gh = #{gh}
+    </select>
+</mapper>

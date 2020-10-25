@@ -1,0 +1,27 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8
+    max-http-post-size: 8096
+spring:
+  mvc:
+    servlet:
+      load-on-startup: 1
+  datasource:
+    url: jdbc:mysql://localhost:3306/jxgldb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&useSSL=false
+    username: jxgldb
+    password: Znf8ixxywBERp3ef
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 10
+      min-idle: 2
+      maxActive: 100
+      maxWait: 10000
+  thymeleaf:
+    cache: false
+    mode: HTML
+    encoding: UTF-8
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: org.jplus.web.mapper

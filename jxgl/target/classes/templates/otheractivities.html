@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 加载bootstrap -->
+    <link rel='stylesheet' href='https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css' />
+    <script src='https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js'></script>
+    <script src='https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <!--    加载jq-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- 引用bootstrap及基础样式 -->
+    <script src="../../js/link.js"></script>
+    <link rel="stylesheet" href="../../css/otheractivities.css">
+    <script src="../../js/jquery.js" th:src="@{/js/jquery.js}"></script>
+    <!--    提交年度-->
+    <script src="js/submit.js"></script>
+    <script>
+        function getTeachYoungTeacherCount() {
+            var guideYoungTeachers = $("#guideYoungTeachers").val();
+            $.ajax({
+                url: "/getTeachYoungTeacherCount",
+                type: 'POST',
+                data:{
+                    guideYoungTeachers: guideYoungTeachers
+                },
+                success: function(data){
+                    $("#teachYoung").html(data);
+                },
+                error : function(data) {
+                }
+            });
+        }
+    </script>
+
+    <script>
+        function getTeachStudentCount() {
+            var numberOfStudentsAssisted = $("#numberOfStudentsAssisted").val();
+            $.ajax({
+                url: "/getTeachStudentCount",
+                type: 'POST',
+                data:{
+                    numberOfStudentsAssisted: numberOfStudentsAssisted
+                },
+                success: function(data){
+                    $("#studentCount").html(data);
+                },
+                error : function(data) {
+                }
+            });
+        }
+    </script>
+
+    <script>
+        function getUndertakeCount() {
+            var reviseTalentTrainingPlan = $('input:radio[name="reviseTalentTrainingPlan"]:checked').val();
+            var prepareCourseSyllabusCount = $("#prepareCourseSyllabusCount").val();
+            var compilingExperimentalSyllabusCount  = $("#compilingExperimentalSyllabusCount ").val();
+            $.ajax({
+                url: "/getUndertakeCount",
+                type: 'POST',
+                data:{
+                    reviseTalentTrainingPlan: reviseTalentTrainingPlan,
+                    prepareCourseSyllabusCount: prepareCourseSyllabusCount,
+                    compilingExperimentalSyllabusCount : compilingExperimentalSyllabusCount
+                },
+                success: function(data){
+                    $("#undertake").html(data);
+                },
+                error : function(data) {
+                }
+            });
+        }
+    </script>
+
+    <script>
+        function saveOther() {
+            var workloadOfTeachingSupervision = $("#workloadOfTeachingSupervision").val();
+            var numberOfStudentsAssisted = $("#numberOfStudentsAssisted").val();
+            var guideYoungTeachers = $("#guideYoungTeachers").val();
+            var reviseTalentTrainingPlan = $('input:radio[name="reviseTalentTrainingPlan"]:checked').val();
+            var prepareCourseSyllabusCount = $("#prepareCourseSyllabusCount").val();
+            var compilingExperimentalSyllabusCount  = $("#compilingExperimentalSyllabusCount ").val();
+            $.ajax({
+                type: 'POST',
+                url: "/addOtherTeachWork",
+                data:{
+                    workloadOfTeachingSupervision: workloadOfTeachingSupervision,
+                    numberOfStudentsAssisted: numberOfStudentsAssisted,
+                    guideYoungTeachers: guideYoungTeachers,
+                    reviseTalentTrainingPlan: reviseTalentTrainingPlan,
+                    prepareCourseSyllabusCount: prepareCourseSyllabusCount,
+                    compilingExperimentalSyllabusCount : compilingExperimentalSyllabusCount
+                },
+                success: function(data){
+                    location.reload(true);
+                },
+                error : function(data) {
+                    location.reload(true);
+                }
+            });
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(function(){
+            initData();
+            getAllQtGzl();
+        });
+        function getAllQtGzl(){
+            $.ajax({
+                type:'GET',
+                url:"/getAllQtGzl",
+                success: function(data){
+                    $("#all").html(data);
+                },
+                error : function(data) {
+
+                }
+            });
+        }
+        function initData(){
+            $.ajax({
+                type:'GET',
+                url:"/getYearNumber",
+                success: function(data){
+                    $("#year").html(data);
+                },
+                error : function(data) {
+
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- 头部 -->
+    <script src="js/titleandnav.js"></script>
+    <!-- 左边导航栏 -->
+    <div class="main">
+        <div class="navbar" id="navwrap">
+            <div class="navwarp">
+                <div class="basic-information">
+                    <a th:href="@{/basicinformation}">教师本年度基本信息</a>
+                </div>
+                <!-- 本科生 -->
+                <div id="bachelor">本科生</div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a th:href="@{/classroomteaching}" >课堂教学</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a th:href="@{/practiceteh}">实践教学</a>
+                    </li>
+                    <li class="list-group-item"><a th:href="@{/qualityengineering}">质量工程建设</a></li>
+                    <li class="list-group-item"><a th:href="@{/teachingresearch}">教学研究</a></li>
+                    <li class="list-group-item"><a th:href="@{/know}">教学竞赛获奖</a></li>
+                    <li class="list-group-item active"><a th:href="@{/other}">其它教育教学活动</a></li>
+                    <li>
+                        <button type="button" id="Submitbtn1" data-toggle="modal" data-target="#Submission1">提交本科生教学工作量</button>
+                    </li>
+                </ul>
+<!--                &lt;!&ndash; 研究生 &ndash;&gt;
+                <div id="postgraduate">研究生</div>
+                <ul class="list-group">
+                    <li class="list-group-item"><a th:href="@{/graduateclass}">课堂教学</a></li>
+                    <li class="list-group-item"><a th:href="@{/graduatepractice}">实践教学</a></li>
+                    <li class="list-group-item"><a th:href="@{/graduateconstruction}">教学基本建设与学科建设</a></li>
+                    <li class="list-group-item"><a th:href="@{/graduateprogram}">教学研究项目</a></li>
+                    <li class="list-group-item"><a th:href="@{/masterKnow}">指导研究生竞赛获奖</a></li>
+                    <li class="list-group-item"><a th:href="@{/masterOther}">其它工作</a></li>
+                    <li>
+                        <button type="button" id="Submitbtn2" data-toggle="modal" data-target="#Submission2">提交本科生教学工作量</button>
+                    </li>
+                </ul>-->
+
+            </div>
+        </div>
+        <!-- 模态框-本科生是否提交 -->
+        <div class="modal fade" id="Submission1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="tips">
+                            <div>提示：</div>
+                            <div style=" text-indent: 2em;">本年度本科生工作量提交以后，就不能修改。如果提交后需要修改，请让分管本科生的教学秘书做撤回操作。</div>
+                        </div>
+                        <div class="btn-submitted">
+                            <a th:href="@{/submitBks}"><button type="button" id="submitted1">继续提交</button></a>
+                            <button type="button" id="notsubmitted1" data-dismiss="modal">不提交</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 模态框-研究生是否提交 -->
+        <div class="modal fade" id="Submission2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="tips">
+                            <div>提示：</div>
+                            <div style=" text-indent: 2em;">本年度研究生工作量提交以后，就不能修改。如果提交后需要修改，请让分管研究生的教学秘书做撤回操作。</div>
+                        </div>
+                        <div class="btn-submitted">
+                            <a th:href="@{/submitYjs}"><button type="button" id="submitted2">继续提交</button></a>
+                            <button type="button" id="notsubmitted2" data-dismiss="modal">不提交</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 其它教学活动部分 -->
+    <div class="informationwarp" id="informationwarp">
+        <!-- 标题 -->
+        <div class="teaching-title">其它教学工作量</div>
+        <div class="msg-warp">
+            <!-- 提示信息栏 -->
+            <div class="msg">
+
+
+<!--                <div class="year">年度<span id="year" name="year"></span></div>-->
+                <form th:action="@{/selectUndergraduateOtherByYear}" method="post" th:object="${xqnd}" id="selectYear">
+                    <div class="year">
+                        <span class="passwordtip" style="letter-spacing: 30px;">年度</span>
+                        <select id="years" onchange="submitForm();" name="xqnd" class="teather-name">
+                            <option th:each="year:${years}" th:selected="${xqnd} == ${year}" th:value="${year}" th:text="${year}"></option>
+                        </select>
+                    </div>
+                </form>
+
+
+                <div class="total-workload">其它教学工作量总计<span id="all" name="all"></span></div>
+                <span th:if="${hidden==0}">
+                    <button type="button" id="save" name="save" onclick="saveOther()">保存</button>
+                </span>
+
+            </div>
+            <!-- 具体工作类别及数目 -->
+            <div class="job-category">
+                <ul>
+                    <li>
+                        <div class="right-shift">教学督导员</div>
+                        <div class="complete">
+                            <span class="right-shift">教学督导工作量</span><input th:value="${qTJXGZ}?${qTJXGZ.ddgzl}:${0}" id="workloadOfTeachingSupervision" name="workloadOfTeachingSupervision" type="text" placeholder=""
+                                class="enter" /><span class="explain">校级:80 分/年，院级：30 分/年</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="work-theme right-shift">学生学业指导帮扶</div>
+                        <div class="workload">工作量<span class="prompt" id="studentCount" name="studentCount"></span></div>
+                        <div class="complete">
+                            <span class="right-shift">帮扶学生人数</span><input th:value="${qTJXGZ}?${qTJXGZ.bfxsrs}:${0}"  id="numberOfStudentsAssisted" onblur="getTeachStudentCount()" name="numberOfStudentsAssisted" type="text" class="enter" placeholder="" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="work-theme right-shift">指导青年教师</div>
+                        <div class="workload">工作量<span class="prompt" id="teachYoung" name="teachYoung"></span></div>
+                        <div class="complete">
+                            <span class="right-shift">指导青年教师人数</span><input th:value="${qTJXGZ}?${qTJXGZ.zdqnjsrs}:${0}" id="guideYoungTeachers" name="guideYoungTeachers" onblur="getTeachYoungTeacherCount()" type="text" placeholder="" class="enter" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="work-theme undertake right-shift max">
+                            承担或参与教学文件制定、修订工作
+                        </div>
+                        <div class="workload">工作量<span class="prompt" id="undertake" name="undertake"></span></div>
+                        <div class="complete">
+                            <span class="right-shift">参加修订人才培养方案:</span>
+                            <span th:if="${qTJXGZ!=null && qTJXGZ.xdrcpyfa!=null}">
+                                <input  th:checked="${qTJXGZ.xdrcpyfa}==1" name="reviseTalentTrainingPlan" type="radio" value="1" class="entry-chose" />是
+                                                <input type="radio" th:checked="${qTJXGZ.xdrcpyfa}==0" name="reviseTalentTrainingPlan" value="0"  />否
+                            </span>
+                            <span th:unless="${qTJXGZ!=null && qTJXGZ.xdrcpyfa!=null}">
+                                <input   name="reviseTalentTrainingPlan" type="radio" value="1" class="entry-chose" />是
+                                                <input type="radio"  name="reviseTalentTrainingPlan" value="0" checked="checked" />否
+                            </span>
+
+                        </div>
+                        <div class="complete">
+                            <span class="right-shift">编写课程教学大纲课程数</span><input  th:value="${qTJXGZ}?${qTJXGZ.kcdgms}:${0}" id="prepareCourseSyllabusCount" name="prepareCourseSyllabusCount" type="text" placeholder=""
+                                class="enter" />
+
+                        </div>
+                        <div class="complete">
+                            <span class="right-shift">编写实验教学大纲课程数</span><input th:value="${qTJXGZ}?${qTJXGZ.sydgms}:${0}" id="compilingExperimentalSyllabusCount" name="compilingExperimentalSyllabusCount" onblur="getUndertakeCount()" type="text" placeholder=""
+                                class="enter" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="" async defer></script>
+
+</body>
+
+</html>

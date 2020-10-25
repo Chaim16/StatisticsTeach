@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 加载bootstrap -->
+    <link rel='stylesheet' href='https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css' />
+    <script src='https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js'></script>
+    <script src='https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <!--    加载jq-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- 引用bootstrap及基础样式 -->
+    <script src="js/link.js"></script>
+    <link rel="stylesheet" href="css/otheractivities.css">
+    <!--    输入框验证-->
+    <script src="js/classroomteaching.js"></script>
+
+    <script>
+        function saveOther() {
+            var workloadOfTeachingSupervision = $("#workloadOfTeachingSupervision").val();
+            var proposition = $("#proposition").val();
+            var examining = $("#examining").val();
+            var check = $("#check").val();
+            var examiner = $("#examiner").val();
+            var invigilator  = $("#invigilator ").val();
+            var checking  = $("#checking ").val();
+            $.ajax({
+                type: 'POST',
+                url: "/addMasterOtherTeachWork",
+                data:{
+                    workloadOfTeachingSupervision: workloadOfTeachingSupervision,
+                    proposition: proposition,
+                    examining: examining,
+                    check: check,
+                    examiner: examiner,
+                    examiner: examiner,
+                    invigilator: invigilator,
+                    checking : checking
+                },
+                success: function(data){
+                    window.location.reload(true);
+                },
+                error : function(data) {
+                    window.location.reload(true);
+                }
+            });
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(function(){
+            initData();
+            getAllQtGzl();
+        });
+        function getAllQtGzl(){
+            $.ajax({
+                type:'GET',
+                url:"/getMasterAllQtGzl",
+                success: function(data){
+                    $("#all").html(data);
+                },
+                error : function(data) {
+
+                }
+            });
+        }
+        function initData(){
+            $.ajax({
+                type:'GET',
+                url:"/getNumber",
+                success: function(data){
+                    $("#year").html(data);
+                },
+                error : function(data) {
+
+                }
+            });
+        }
+    </script>
+
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- 头部 -->
+    <script src="js/titleandnav.js"></script>
+    <!-- 左边导航栏 -->
+    <div class="main">
+        <div class="navbar" id="navwarp">
+            <div class="navwarp">
+                <div class="basic-information">
+                    <a th:href="@{/basicinformation}">教师本年度基本信息</a>
+                </div>
+                <!-- 本科生 -->
+                <div id="bachelor">本科生</div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a th:href="@{/classroomteaching}" >课堂教学</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a th:href="@{/practiceteh}">实践教学</a>
+                    </li>
+                    <li class="list-group-item"><a th:href="@{/qualityengineering}">质量工程建设</a></li>
+                    <li class="list-group-item"><a th:href="@{/teachingresearch}">教学研究</a></li>
+                    <li class="list-group-item"><a th:href="@{/know}">教学竞赛获奖</a></li>
+                    <li class="list-group-item"><a th:href="@{/other}">其它教育教学活动</a></li>
+                    <li>
+                        <button type="button" id="Submitbtn1" data-toggle="modal" data-target="#Submission1">提交本科生教学工作量</button>
+                    </li>
+                </ul>
+                <!-- 研究生 -->
+                <div id="postgraduate">研究生</div>
+                <ul class="list-group">
+                    <li class="list-group-item"><a th:href="@{/graduateclass}">课堂教学</a></li>
+                    <li class="list-group-item"><a th:href="@{/graduatepractice}">实践教学</a></li>
+                    <li class="list-group-item"><a th:href="@{/graduateconstruction}">教学基本建设与学科建设</a></li>
+                    <li class="list-group-item"><a th:href="@{/graduateprogram}">教学研究项目</a></li>
+                    <li class="list-group-item"><a th:href="@{/masterKnow}">指导研究生竞赛获奖</a></li>
+                    <li class="list-group-item active"><a th:href="@{/masterOther}">其它工作</a></li>
+                    <li>
+                        <button type="button" id="Submitbtn2" data-toggle="modal" data-target="#Submission2">提交本科生教学工作量</button>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <!-- 模态框-本科生是否提交 -->
+        <div class="modal fade" id="Submission1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="tips">
+                            <div>提示：</div>
+                            <div style=" text-indent: 2em;">本年度本科生工作量提交以后，就不能修改。如果提交后需要修改，请让分管本科生的教学秘书做撤回操作。</div>
+                        </div>
+                        <div class="btn-submitted">
+                            <a th:href="@{/submitBks}"><button type="button" id="submitted1">继续提交</button></a>
+                            <button type="button" id="notsubmitted1" data-dismiss="modal">不提交</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 模态框-研究生是否提交 -->
+        <div class="modal fade" id="Submission2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="tips">
+                            <div>提示：</div>
+                            <div style=" text-indent: 2em;">本年度研究生工作量提交以后，就不能修改。如果提交后需要修改，请让分管研究生的教学秘书做撤回操作。</div>
+                        </div>
+                        <div class="btn-submitted">
+                            <a th:href="@{/submitYjs}"><button type="button" id="submitted2">继续提交</button></a>
+                            <button type="button" id="notsubmitted2" data-dismiss="modal">不提交</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 其它教学活动部分 -->
+    <div class="informationwarp" id="informationwarp">
+        <!-- 标题 -->
+        <div class="teaching-title">研究生教学其它教学工作量</div>
+        <div class="msg-warp">
+            <!-- 提示信息栏 -->
+            <div class="msg">
+                <div class="year">年度<span id="year" name="year">2019</span></div>
+                <div class="total-workload">其它教学工作量总计<span id="all" name="all"></span></div>
+                <span th:if="${hidden==0}">
+                    <button type="button" id="save" onclick="saveOther()">保存</button>
+                </span>
+            </div>
+            <!-- 具体工作类别及数目 -->
+            <div class="job-category">
+                <ul>
+                    <li style="margin-bottom: 5%;">
+                        <div class="right-shift">教学督导员</div>
+                        <div class="complete">
+                            <span class="right-shift">教学督导工作量</span><input th:value="${yJSQTJX}?${yJSQTJX.jxddgzl}:${0}" type="text" id="workloadOfTeachingSupervision" name="workloadOfTeachingSupervision" placeholder="" class="enter timenum"
+                                 /><span class="explain">每学期50分</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="complete">
+                            <span class="right-shift">初复试自命题</span><input th:value="${yJSQTJX}?${yJSQTJX.mtfs}:${0}" type="text" id="proposition" name="proposition" class="enter timenum" placeholder="" />份
+                        </div>             
+                        <div class="complete">
+                            <span class="right-shift">初复试自命题审题</span><input th:value="${yJSQTJX}?${yJSQTJX.stfs}:${0}" type="text" id="examining" name="examining" placeholder="" class="enter timenum" />份
+                        </div>                  
+                        <div class="complete">
+                            <span class="right-shift">初复试自命题校对</span><input th:value="${yJSQTJX}?${yJSQTJX.jdts}:${0}" type="text" id="check" name="check" placeholder=""
+                                class="enter timenum" />套（含AB卷）
+                        </div>
+                        <div class="complete">
+                            <span class="right-shift">复试面试考官</span><input th:value="${yJSQTJX}?${yJSQTJX.fsmskg}:${0}" type="text" id="examiner" name="examiner" placeholder="" class="enter timenum" />次
+                        </div>
+                        <div class="complete">
+                            <span class="right-shift">复试监考</span><input th:value="${yJSQTJX}?${yJSQTJX.fsjkcs}:${0}" type="text" id="invigilator" name="invigilator" placeholder="" class="enter timenum" />次
+                        </div>
+                        <div class="complete">
+                            <span class="right-shift">考试阅卷（初试、复试）</span><input th:value="${yJSQTJX}?${yJSQTJX.yjfs}:${0}" type="text" id="checking" name="checking"  placeholder=""
+                                class="enter timenum" />份
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="" async defer></script>
+
+
+</body>
+
+</html>

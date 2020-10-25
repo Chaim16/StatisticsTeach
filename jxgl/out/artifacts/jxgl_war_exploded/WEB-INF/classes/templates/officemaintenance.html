@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <!-- 加载bootstrap -->
+    <link rel='stylesheet' href='https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css' />
+    <script src='https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js'></script>
+    <script src='https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <!--    加载jq-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="../../js/jquery.js" th:src="@{/js/jquery.js}"></script>
+    <script src="js/link.js"></script>
+    <script src="js/basicinformation.js"></script>
+    <!-- 引用bootstrap及基础样式 -->
+    <!--    输入框验证-->
+    <script src="js/classroomteaching.js"></script>
+    <link rel="stylesheet" href="css/tablestyle.css" />
+    <link rel="stylesheet" href="css/usermaintenance.css" />
+    <!--    添加样式-->
+    <script src="js/ward.js"></script>
+
+
+        <script>
+            function addUser() {
+                var gh = $("#gh").val();
+                var name = $("#name").val();
+                var type = $("#type").val();
+                $.ajax({
+                    type: 'POST',
+                    url: "/addUser",
+                    data:{
+                        gh: gh,
+                        name: name,
+                        type: type
+                    },
+                    success: function(data){
+                        location.reload(true);
+                        alert(data);
+                    },
+                    error : function(data) {
+                        location.reload(true);
+                    }
+                });
+            }
+        </script>
+</head>
+
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">
+    You are using an <strong>outdated</strong> browser. Please
+    <a href="#">upgrade your browser</a> to improve your experience.
+</p>
+<![endif]-->
+<!-- 头部 -->
+<div class="toptitle">
+    <span id="title">湖北师范大学教学工作量统计系统</span>
+    <a href="" id="change-password" data-toggle="modal" data-target="#changePasswordModal">修改密码</a>
+</div>
+<!-- 修改密码 -->
+<div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h5 class="modal-title" id="myModalLabel" style="text-align: center;">
+                    <div>修改密码</div>
+                    <div style="color: #424251;font-size: 12px;margin-top: 2%;">(提示：若密码修改成功后,会跳回登录页面)</div>
+                </h5>
+            </div>
+            <div class="modal-body modaldiv">
+                <form action="/updatepassword2" method="post">
+                    <div>
+                        原密码：<input type="password" class="form-control-1 form-control-jub class-name password" placeholder="" name="oldPassword"/>
+                    </div>
+                    <div class="warning unquie">原密码不能为空！</div>
+                    <div>
+                        新密码：<input type="password" class="form-control-1 form-control-jub class-name password" placeholder="" name="newPassword"/>
+                    </div>
+                    <div class="warning unquie">新密码不能为空！</div>
+                    <div>
+                        请确认密码：<input type="password" class="form-control-1 form-control-jub class-number password" placeholder=""
+                                     name="newPassword2" />
+                    </div>
+                    <div class="warning unquie">确认密码不能为空！</div>
+                    <div class="notnull">新密码与确认密码不一致！</div>
+                    <div class="btn-add">
+                        <button type="submit" class="modify">修改</button>
+                        <button type="button" class="cancel" data-dismiss="modal">取消</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 左边导航栏 -->
+<div class="main">
+    <div class="navbar" id="navwrap">
+        <div class="navwarp">
+            <div class="maintenance active">
+                <a th:href="@{/user}">本院用户维护</a>
+            </div>
+            <div class="collegeworkload active"><a th:href="@{/officecollege}">审核本学院本科生工作量</a></div>
+            <div class="export"><a th:href="@{/QXexcelOut1}">导出本科生教学工作量统计表</a></div>
+        </div>
+    </div>
+</div>
+<!-- 用户维护界面 -->
+<div class="informationwarp" id="informationwarp" style="position: center;min-height: 100vh;top: 0;padding-top: 60px">
+    <div class="information-title" style="margin-top:0;padding-top: 1%">教师列表</div>
+    <!-- 保存按钮 -->
+    <button type="button" id="save" data-toggle="modal" data-target="#myModal">添加</button>
+    <!-- 模态框（Modal）登陆界面 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- 模态框头部 -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h5 class="modal-title" id="myModalLabel" style="text-align: center;">
+                        用户维护
+                    </h5>
+                </div>
+                <!-- 添加维护用户 -->
+                <div class="modal-body">
+                    <!--<div>
+                        院系：<select id="department" name="department" class="form-control-1">
+                        <option value="1">经济管理与法学院</option>
+                        <option value="2">马克思主义学院</option>
+                        <option value="3">教育科学学院</option>
+                        <option value="4">教师教育学院</option>
+                        <option value="5">体育学院</option>
+                        <option value="6">文学院</option>
+                        <option value="7">外国语学院</option>
+                        <option value="8">历史文化学院</option>
+                        <option value="9">数学与统计学院</option>
+                        <option value="10">物理与电子科学学院</option>
+                        <option value="11">化学化工学院</option>
+                        <option value="12">城市与环境学院</option>
+                        <option value="13">生命科学学院</option>
+                        <option value="14">机电与控制工程学院</option>
+                        <option value="15">计算机与信息工程学院</option>
+                        <option value="16">音乐学院</option>
+                        <option value="17">美术学院</option>
+                        <option value="18">继续教育学院</option>
+                        <option value="19">先进材料研究院</option>
+                        <option value="21">研究生院</option>
+                        <option value="22">教务处</option>
+                        <option value="23">科研处</option>
+                        <option value="24">信息化建设与管理中心</option>
+                        <option value="25">机关</option>
+                        <option value="26">图书馆</option>
+                        <option value="27">档案馆</option>
+                        <option value="28">学报编辑部</option>
+                        <option value="29">后勤及其他</option>
+                    </select>
+                    </div>-->
+                    <div>
+                        <span class="meter"><span class="passwordtip">工</span>号：</span><input id="gh" name="gh" type="text" class="form-control-1 form-control-jub" placeholder="" />
+                    </div>
+                    <div class="warning">工号不能为空！</div>
+                    <div>
+                        <span class="meter"><span class="passwordtip">姓</span>名：</span><input id="name" name="name" type="text" class="form-control-1 form-control-jub" placeholder="" />
+                    </div>
+                    <div class="warning">姓名不能为空！</div>
+                    <div>
+                        <span class="meter"><span class="passwordtip">类</span>型：</span><select id="type" name="type">
+                        <!--<option value="3">教务处</option>-->
+                        <option value="1">普通教师</option>
+                        <option value="2">院系本科生审核人</option>
+                        <option value="4">院系研究生审核人</option>
+                    </select>
+                    </div>
+                    <div class="btn-add">
+                        <button type="submit" class="addoffice" onclick="addUser()">添加</button>
+                        <button type="button" class="cancel" data-dismiss="modal">
+                            取消
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="msg-warp">
+        <!-- 表格数据 -->
+        <div class="table-wrap">
+            <table class="table table-bordered edtitable">
+                <thead>
+                <tr>
+                    <th>院系</th>
+                    <th>工号</th>
+                    <th>姓名</th>
+                    <th>类型</th>
+                    <!--<th>初始密码</th>-->
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="userList:${userList}">
+                    <td th:text="${userList.ysname}">Month</td>
+                    <td th:text="${userList.gh}" class="notedit">
+                        kkk
+                    </td>
+                    <td th:text="${userList.uname}" class="notedit">
+                        ppp
+                    </td>
+                    <td th:text="${userList.acterName}">Savings</td>
+                    <!--<td class="notedit">560001</td>-->
+                    <!-- 删除按钮 -->
+                    <td class="del-col notedit">
+                        <a th:href="@{/deleteUser(gh=${userList.gh})}" type="submit" class="delBtn">删 除</a>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="footer" style="width:80%;height:35px;text-align: center;position: absolute;bottom: 0;font-size: 12px;color: #BDBDAE;">
+        <div style="height: 16px;line-height: 16px;font-size: 12px;"><span style="font-family:arial;">&copy; </span>2019<span id="newyear"></span>湖北师范大学(www.hbnu.edu.cn).All rights reserved.</div>
+        <div style="height: 16px;line-height: 16px;font-size: 12px;">技术支持：Jplus实验室</div>
+    </div>
+</div>
+<script>
+    var myDate = new Date();
+    var tYear = myDate.getFullYear();
+    var now=2019;
+    var oDate1 = new Date(tYear);
+    var oDate2 = new Date(now);
+    if(oDate1>oDate2){
+        document.getElementById("newyear").innerHTML="-"+tYear;
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="jxgl" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7740fc03-9195-4a4c-b1ad-9947708490b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/practicalteaching.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/submit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/config/UserArgumentResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/config/UserArgumentResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/controller/BasisInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/controller/BasisInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/controller/BkssjjxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/controller/BkssjjxController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/controller/ClassroomTeachController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/controller/ClassroomTeachController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/controller/ExcelOutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/controller/ExcelOutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/controller/GraduateClassController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/controller/GraduateConstructionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/controller/GraduateConstructionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/controller/GraduateOtherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/controller/GraduateOtherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/controller/GraduateProgramController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/controller/GraduateProgramController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/controller/GraduateYjssjjxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/controller/GraduateYjssjjxController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/controller/GraduateawardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/controller/GraduateawardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/controller/OfficecollegeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/controller/OfficecollegeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/controller/QualityEngineerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/controller/QualityEngineerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/controller/TeachingResearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/controller/TeachingResearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/controller/TestCheckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/controller/TestCheckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/controller/TjController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/controller/TjController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/controller/UndergraduateKnowledgeContestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/controller/UndergraduateKnowledgeContestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/controller/UndergraduateOtherActivities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/controller/UndergraduateOtherActivities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/dto/BkssjjxEx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/dto/BkssjjxEx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/mapper/BksktjxMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/mapper/BksktjxMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/mapper/BkssjjxMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/mapper/BkssjjxMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/mapper/CheckMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/mapper/CheckMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/mapper/CheckgzlMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/mapper/CheckgzlMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/mapper/JbxxMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/mapper/JbxxMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/mapper/JxcgMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/mapper/JxcgMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/mapper/TjbMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/mapper/TjbMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/mapper/ZlgcMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/mapper/ZlgcMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/Tjzt/Tjb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/Tjzt/Tjb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/Tjzt/Tjzt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/Tjzt/Tjzt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/basisInfo/Gwlxbm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/basisInfo/Gwlxbm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/basisInfo/Jbxx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/basisInfo/Jbxx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/basisInfo/JbxxAccpet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/basisInfo/JbxxAccpet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/basisInfo/Yxbm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/basisInfo/Yxbm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/basisInfo/Zcbm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/basisInfo/Zcbm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/basisInfo/Zwbm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/basisInfo/Zwbm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/bks/Bkssjjx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/bks/Bkssjjx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/bks/Sxlx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/bks/Sxlx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/bks/Zylxbm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/bks/Zylxbm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/check/BkssjjxInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/check/BkssjjxInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/check/Sxlx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/check/Sxlx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/check/YjssjjxInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/check/YjssjjxInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/check/Yjssxlxbm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/check/Yjssxlxbm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/check/Zylxbm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/check/Zylxbm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/checkgzl/Checkgzl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/checkgzl/Checkgzl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/classTeach/Bksktjx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/classTeach/Bksktjx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/classTeach/BksktjxAccpet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/classTeach/BksktjxAccpet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/classTeach/Kclx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/classTeach/Kclx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/jbjsyxkjs/JBJSYXKJS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/jbjsyxkjs/JBJSYXKJS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/jbjsyxkjs/JBJSYXKJSAccept.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/jbjsyxkjs/JBJSYXKJSAccept.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/masterCompartitionAndOther/YJSQTJX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/masterCompartitionAndOther/YJSQTJX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/teachingresearchInfo/Hxxm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/teachingresearchInfo/Hxxm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/teachingresearchInfo/Jc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/teachingresearchInfo/Jc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/teachingresearchInfo/Jcjb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/teachingresearchInfo/Jcjb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/teachingresearchInfo/Jxcg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/teachingresearchInfo/Jxcg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/teachingresearchInfo/Jxcgdj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/teachingresearchInfo/Jxcgdj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/teachingresearchInfo/Jxgg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/teachingresearchInfo/Jxgg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/teachingresearchInfo/Lxjb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/teachingresearchInfo/Lxjb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/teachingresearchInfo/Zxxm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/teachingresearchInfo/Zxxm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/teachingresearchInfo/Zxxmdj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/teachingresearchInfo/Zxxmdj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/yjsjyxm/Yjshxxm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/yjsjyxm/Yjshxxm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/yjsjyxm/Yjsjyxm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/yjsjyxm/Yjsjyxm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/yjsktjx/Yjskclx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/yjsktjx/Yjskclx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/yjsktjx/Yjsktjx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/yjsktjx/Yjsktjx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/yjsktjx/YjsktjxAccpet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/yjsktjx/YjsktjxAccpet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/yjssjjx/Yjssjjx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/yjssjjx/Yjssjjx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/yjssjjx/YjssjjxAccpet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/yjssjjx/YjssjjxAccpet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/yjssjjx/Yjssxlxbm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/yjssjjx/Yjssxlxbm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/zlgc/Zlgc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/zlgc/Zlgc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/zlgc/ZlgcAccept.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/zlgc/ZlgcAccept.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/zlgc/Zlgcxmlx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/pojo/zlgc/Zlgcxmlx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/service/BksktjxService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/service/BksktjxService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/service/BksktjxServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/service/BksktjxServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/service/BkssjjxService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/service/BkssjjxService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/service/BkssjjxServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/service/BkssjjxServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/service/CheckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/service/CheckService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/service/CheckServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/service/CheckServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/service/JbxxService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/service/JbxxService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/service/JbxxServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/service/JbxxServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/service/JxcgService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/service/JxcgService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/service/JxcgServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/service/JxcgServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/service/OfficecollegeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/service/OfficecollegeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/service/OfficecollegeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/service/OfficecollegeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/service/TjbService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/service/TjbService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/service/TjbServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/service/TjbServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/service/ZlgcService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/service/ZlgcService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/service/ZlgcServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/service/ZlgcServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/utils/DateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/utils/DateUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jplus/utils/GetYear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jplus/utils/GetYear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/BksktjxMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BksktjxMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CheckMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CheckMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CheckgzlMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CheckgzlMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/JbxxMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/JbxxMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TjbMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TjbMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ZlgcMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ZlgcMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/basicinformation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/basicinformation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/practicalteaching.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/practicalteaching.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/basicinformation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/basicinformation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/basicinformation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/basicinformation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/classroomteaching.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/classroomteaching.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/departmentalaudit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/departmentalaudit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/departmentmaintenance.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/departmentmaintenance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/graduateother.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/graduateother.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/knowledgecontest.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/knowledgecontest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/officecollege.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/officecollege.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/officedetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/officedetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/officemaintenance.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/officemaintenance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/otheractivities.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/otheractivities.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/practicalteaching.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/practicalteaching.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/qualityengineering.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/qualityengineering.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teachingresearch.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teachingresearch.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\mvnrep" />
+        <option name="mavenHome" value="C:\Program Files\Apache Software Foundation\apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="C:\Program Files\Apache Software Foundation\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hadbSNZnLKfI0nE9XiaHr9TgSZ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IdeaProject\教师工作量统计系统\jxgl\src\main\resources\templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProject\教师工作量统计系统\jxgl\src\main\resources\static\js" />
+      <recent name="E:\IdeaProject\教师工作量统计系统\jxgl\src\main\resources\templates" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="jxgl" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.jplus.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringConfigurationTabSettings">
+    <option name="sortAlpha" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7740fc03-9195-4a4c-b1ad-9947708490b9" name="Default Changelist" comment="" />
+      <created>1600253207772</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600253207772</updated>
+      <workItem from="1600253211466" duration="22000" />
+      <workItem from="1600253268037" duration="915000" />
+      <workItem from="1600254218764" duration="1246000" />
+      <workItem from="1600316964928" duration="1788000" />
+      <workItem from="1600864147360" duration="1862000" />
+      <workItem from="1600866046798" duration="514000" />
+      <workItem from="1600866580991" duration="2813000" />
+      <workItem from="1600938634679" duration="1396000" />
+      <workItem from="1600944177298" duration="3186000" />
+      <workItem from="1600949783686" duration="17000" />
+      <workItem from="1601037767835" duration="454000" />
+      <workItem from="1601038446878" duration="673000" />
+      <workItem from="1601090641442" duration="15544000" />
+      <workItem from="1601125163691" duration="324000" />
+      <workItem from="1601248869815" duration="57000" />
+      <workItem from="1602479560659" duration="1424000" />
+      <workItem from="1602481017753" duration="980000" />
+      <workItem from="1602482023917" duration="10792000" />
+      <workItem from="1602497714261" duration="13549000" />
+      <workItem from="1602564505500" duration="11044000" />
+      <workItem from="1602575662222" duration="25072000" />
+      <workItem from="1602640247259" duration="6441000" />
+      <workItem from="1602650147223" duration="9109000" />
+      <workItem from="1602665864361" duration="7607000" />
+      <workItem from="1602676284626" duration="428000" />
+      <workItem from="1602676735337" duration="4103000" />
+      <workItem from="1602842540568" duration="597000" />
+      <workItem from="1603029816639" duration="12000" />
+      <workItem from="1603068080622" duration="16000" />
+      <workItem from="1603072993196" duration="1378000" />
+      <workItem from="1603087216747" duration="195000" />
+      <workItem from="1603088790236" duration="880000" />
+      <workItem from="1603107192117" duration="140000" />
+      <workItem from="1603184998080" duration="889000" />
+      <workItem from="1603185908609" duration="4111000" />
+      <workItem from="1603260270336" duration="4794000" />
+      <workItem from="1603268365613" duration="947000" />
+      <workItem from="1603352088154" duration="740000" />
+      <workItem from="1603377164311" duration="835000" />
+      <workItem from="1603469279724" duration="22000" />
+      <workItem from="1603550610559" duration="9103000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="440" y="102" key="#Project_Structure" timestamp="1602485807977">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="440" y="102" key="#Project_Structure/0.0.1920.1049@0.0.1920.1049" timestamp="1602485807977" />
+    <state x="271" y="200" width="1094" height="817" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602480871296">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="271" y="200" width="1094" height="817" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1049@0.0.1920.1049" timestamp="1602480871296" />
+    <state x="413" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1600945421160" />
+    <state x="765" y="211" key="#com.intellij.ide.util.MemberChooser" timestamp="1602643321299">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="765" y="211" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1049@0.0.1920.1049" timestamp="1602643321299" />
+    <state x="745" y="470" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1600864599383">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="745" y="470" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1049@0.0.1920.1049" timestamp="1600864599383" />
+    <state x="736" y="418" width="447" height="222" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1602575929030">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="736" y="418" width="447" height="222" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1049@0.0.1920.1049" timestamp="1602575929030" />
+    <state x="736" y="418" width="447" height="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1050@0.0.1920.1050" timestamp="1601121582550" />
+    <state x="549" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602490603575">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="549" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1049@0.0.1920.1049" timestamp="1602490603575" />
+    <state x="690" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602512566792">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="690" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1049@0.0.1920.1049" timestamp="1602512566792" />
+    <state x="640" y="282" key="DUMP_DIALOG_DIMENSION_KEY" timestamp="1603185543384">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="640" y="282" key="DUMP_DIALOG_DIMENSION_KEY/0.0.1920.1049@0.0.1920.1049" timestamp="1603185543384" />
+    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1603469300069">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1049@0.0.1920.1049" timestamp="1603469300069" />
+    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1601248915402" />
+    <state x="2660" y="309" key="FileChooserDialogImpl/0.30.1920.1050/1920.30.1920.1050@1920.30.1920.1050" timestamp="1600254066319" />
+    <state width="1877" height="350" key="GridCell.Tab.0.bottom" timestamp="1603559797401">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state width="1877" height="350" key="GridCell.Tab.0.bottom/0.0.1920.1049@0.0.1920.1049" timestamp="1603559797401" />
+    <state width="1860" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1601119640236" />
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.30.1920.1050/1920.30.1920.1050@1920.30.1920.1050" timestamp="1600255465510" />
+    <state width="1877" height="350" key="GridCell.Tab.0.center" timestamp="1603559797400">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state width="1877" height="350" key="GridCell.Tab.0.center/0.0.1920.1049@0.0.1920.1049" timestamp="1603559797400" />
+    <state width="1860" height="281" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1601119640236" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center/0.30.1920.1050/1920.30.1920.1050@1920.30.1920.1050" timestamp="1600255465510" />
+    <state width="1877" height="350" key="GridCell.Tab.0.left" timestamp="1603559797400">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state width="1877" height="350" key="GridCell.Tab.0.left/0.0.1920.1049@0.0.1920.1049" timestamp="1603559797400" />
+    <state width="1860" height="281" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1601119640235" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left/0.30.1920.1050/1920.30.1920.1050@1920.30.1920.1050" timestamp="1600255465510" />
+    <state width="1877" height="350" key="GridCell.Tab.0.right" timestamp="1603559797400">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state width="1877" height="350" key="GridCell.Tab.0.right/0.0.1920.1049@0.0.1920.1049" timestamp="1603559797400" />
+    <state width="1860" height="281" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1601119640236" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right/0.30.1920.1050/1920.30.1920.1050@1920.30.1920.1050" timestamp="1600255465510" />
+    <state width="1877" height="350" key="GridCell.Tab.1.bottom" timestamp="1603559797401">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state width="1877" height="350" key="GridCell.Tab.1.bottom/0.0.1920.1049@0.0.1920.1049" timestamp="1603559797401" />
+    <state width="1860" height="281" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1601119640236" />
+    <state width="1877" height="275" key="GridCell.Tab.1.bottom/0.30.1920.1050/1920.30.1920.1050@1920.30.1920.1050" timestamp="1600255465510" />
+    <state width="1877" height="350" key="GridCell.Tab.1.center" timestamp="1603559797401">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state width="1877" height="350" key="GridCell.Tab.1.center/0.0.1920.1049@0.0.1920.1049" timestamp="1603559797401" />
+    <state width="1860" height="281" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1601119640236" />
+    <state width="1877" height="275" key="GridCell.Tab.1.center/0.30.1920.1050/1920.30.1920.1050@1920.30.1920.1050" timestamp="1600255465510" />
+    <state width="1877" height="350" key="GridCell.Tab.1.left" timestamp="1603559797401">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state width="1877" height="350" key="GridCell.Tab.1.left/0.0.1920.1049@0.0.1920.1049" timestamp="1603559797401" />
+    <state width="1860" height="281" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1601119640236" />
+    <state width="1877" height="275" key="GridCell.Tab.1.left/0.30.1920.1050/1920.30.1920.1050@1920.30.1920.1050" timestamp="1600255465510" />
+    <state width="1877" height="350" key="GridCell.Tab.1.right" timestamp="1603559797401">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state width="1877" height="350" key="GridCell.Tab.1.right/0.0.1920.1049@0.0.1920.1049" timestamp="1603559797401" />
+    <state width="1860" height="281" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1601119640236" />
+    <state width="1877" height="275" key="GridCell.Tab.1.right/0.30.1920.1050/1920.30.1920.1050@1920.30.1920.1050" timestamp="1600255465510" />
+    <state width="1877" height="350" key="GridCell.Tab.2.bottom" timestamp="1603559797401">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state width="1877" height="350" key="GridCell.Tab.2.bottom/0.0.1920.1049@0.0.1920.1049" timestamp="1603559797401" />
+    <state width="1877" height="352" key="GridCell.Tab.2.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1600949743548" />
+    <state width="1877" height="350" key="GridCell.Tab.2.center" timestamp="1603559797401">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state width="1877" height="350" key="GridCell.Tab.2.center/0.0.1920.1049@0.0.1920.1049" timestamp="1603559797401" />
+    <state width="1877" height="352" key="GridCell.Tab.2.center/0.0.1920.1050@0.0.1920.1050" timestamp="1600949743548" />
+    <state width="1877" height="350" key="GridCell.Tab.2.left" timestamp="1603559797401">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state width="1877" height="350" key="GridCell.Tab.2.left/0.0.1920.1049@0.0.1920.1049" timestamp="1603559797401" />
+    <state width="1877" height="352" key="GridCell.Tab.2.left/0.0.1920.1050@0.0.1920.1050" timestamp="1600949743548" />
+    <state width="1877" height="350" key="GridCell.Tab.2.right" timestamp="1603559797401">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state width="1877" height="350" key="GridCell.Tab.2.right/0.0.1920.1049@0.0.1920.1049" timestamp="1603559797401" />
+    <state width="1877" height="352" key="GridCell.Tab.2.right/0.0.1920.1050@0.0.1920.1050" timestamp="1600949743548" />
+    <state width="287" height="477" key="HiddenNamespacesPopup" timestamp="1600945213859">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="287" height="477" key="HiddenNamespacesPopup/0.0.1920.1050@0.0.1920.1050" timestamp="1600945213859" />
+    <state x="454" y="141" key="SettingsEditor" timestamp="1603550664484">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="454" y="141" key="SettingsEditor/0.0.1920.1049@0.0.1920.1049" timestamp="1603550664484" />
+    <state x="152" y="196" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1601117442347" />
+    <state x="2337" y="198" key="SettingsEditor/0.30.1920.1050/1920.30.1920.1050@1920.30.1920.1050" timestamp="1600254077760" />
+    <state x="785" y="339" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1601104273556">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="785" y="339" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1601104273556" />
+    <state x="370" y="513" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600938371766">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="370" y="513" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1049@0.0.1920.1049" timestamp="1600938371766" />
+    <state x="499" y="260" width="922" height="642" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1602480124796">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="499" y="260" width="922" height="642" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1049@0.0.1920.1049" timestamp="1602480124796" />
+    <state x="237" y="114" width="1514" height="838" key="dock-window-1" timestamp="1602651701361">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="237" y="114" width="1514" height="838" key="dock-window-1/0.0.1920.1049@0.0.1920.1049" timestamp="1602651701361" />
+    <state x="376" y="22" width="1187" height="1037" key="dock-window-1/0.0.1920.1050@0.0.1920.1050" timestamp="1601117236066" />
+    <state x="289" y="33" width="1514" height="1037" key="dock-window-2" timestamp="1602654632979">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="289" y="33" width="1514" height="1037" key="dock-window-2/0.0.1920.1049@0.0.1920.1049" timestamp="1602654632979" />
+    <state x="426" y="160" width="1084" height="720" key="dock-window-2/0.0.1920.1050@0.0.1920.1050" timestamp="1601119557853" />
+    <state x="690" y="38" width="1091" height="838" key="dock-window-3" timestamp="1602654632979">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="690" y="38" width="1091" height="838" key="dock-window-3/0.0.1920.1049@0.0.1920.1049" timestamp="1602654632979" />
+    <state x="328" y="78" width="1091" height="838" key="dock-window-4" timestamp="1602666529731">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="328" y="78" width="1091" height="838" key="dock-window-4/0.0.1920.1049@0.0.1920.1049" timestamp="1602666529731" />
+    <state x="664" y="245" width="592" height="558" key="find.popup" timestamp="1603262877625">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="664" y="245" width="592" height="558" key="find.popup/0.0.1920.1049@0.0.1920.1049" timestamp="1603262877625" />
+    <state x="551" y="185" key="new project wizard" timestamp="1603087399383">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="551" y="185" key="new project wizard/0.0.1920.1049@0.0.1920.1049" timestamp="1603087399383" />
+    <state x="551" y="185" key="new project wizard/0.0.1920.1050@0.0.1920.1050" timestamp="1601248923334" />
+    <state x="655" y="280" key="refactoring.ChangeSignatureDialog" timestamp="1603554883322">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="655" y="280" key="refactoring.ChangeSignatureDialog/0.0.1920.1049@0.0.1920.1049" timestamp="1603554883322" />
+    <state x="604" y="224" width="672" height="678" key="search.everywhere.popup" timestamp="1603262741523">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="604" y="224" width="672" height="678" key="search.everywhere.popup/0.0.1920.1049@0.0.1920.1049" timestamp="1603262741523" />
+    <state x="586" y="277" key="spring file set editor" timestamp="1600864933842">
+      <screen x="0" y="0" width="1920" height="1049" />
+    </state>
+    <state x="586" y="277" key="spring file set editor/0.0.1920.1049@0.0.1920.1049" timestamp="1600864933842" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
