@@ -13,11 +13,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 加载bootstrap -->
-    <link rel='stylesheet' href='https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css' />
-    <script src='https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js'></script>
-    <script src='https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <link rel='stylesheet' href='css/bootstrap.min.css' />
+    <script src='js/jquery.min.js'></script>
+    <script src='js/bootstrap.min.js'></script>
     <!--    加载jq-->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
     <!-- 引用bootstrap及基础样式 -->
     <script src="js/link.js"></script>
     <!--css样式-->
@@ -123,17 +123,14 @@
         <div class="msg-warp">
             <!-- 提示信息栏 -->
             <div class="msg">
-<!--                <div class="year">年度<span th:text="${year}"></span></div>-->
-
                 <form th:action="@{/selectClassRoomTeachByYear}" method="post" th:object="${xqnd}" id="selectYear">
                     <div class="year">
                         <span class="passwordtip" style="letter-spacing: 30px;">年度</span>
                         <select id="years" onchange="submitForm();" name="xqnd" class="teather-name">
-                            <option th:each="year:${years}" th:selected="${xqnd} == ${year}" th:value="${year}" th:text="${year}"></option>
+                            <option th:each="year:${years}" th:selected="${xqnd == year}" th:value="${year}" th:text="${year}"></option>
                         </select>
                     </div>
                 </form>
-
 
                 <div class="total-workload">课堂教学工作量总计<span th:text="${ktjxgzlSum}"></span></div>
                 <!-- 模态框-添加按钮 -->

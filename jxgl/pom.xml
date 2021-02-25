@@ -15,6 +15,16 @@
         <version>2.1.3.RELEASE</version>
     </parent>
 
+<!--    打包
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>-->
+
     <dependencies>
         <!--spring-boot启动器依赖-->
         <dependency>

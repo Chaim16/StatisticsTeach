@@ -26,9 +26,11 @@ public class BasisInfoController {
     /* 基本信息Service */
     @Autowired
     private JbxxService jbxxService;
+
     /* 提交状态Service */
     @Autowired
     private TjztService tjztService;
+
     /* 本科生课堂教学 */
     @Autowired
     private BksktjxService bksktjxService;
@@ -107,8 +109,9 @@ public class BasisInfoController {
     @NeedLogin
     @PostMapping("/selectBasisInfoByYear")
     public String selectBasisInfoByYear(@ModelAttribute(value = "xqnd") Integer xqnd) {
+        System.out.println("来了" + xqnd);
         this.xqnd = xqnd;
-        return "redirect:basicinformation";
+        return "redirect:/basicinformation";
     }
 
 }

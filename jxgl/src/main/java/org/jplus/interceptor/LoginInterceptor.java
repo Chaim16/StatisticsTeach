@@ -1,7 +1,7 @@
 package org.jplus.interceptor;
 
 import org.jplus.pojo.Users;
-import org.jplus.service.UserServiceImpl;
+import org.jplus.service.impl.UserServiceImpl;
 import org.jplus.utils.UserContext;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;

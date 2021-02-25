@@ -2,7 +2,6 @@ package org.jplus.controller;
 
 import org.jplus.interceptor.NeedLogin;
 import org.jplus.pojo.Tjzt.Tjb;
-import org.jplus.pojo.Tjzt.Tjzt;
 import org.jplus.pojo.Users;
 import org.jplus.pojo.undergraduateCompatitonAndOther.ZDXSLW;
 import org.jplus.pojo.masterCompartitionAndOther.ZDSSLW;
@@ -10,6 +9,7 @@ import org.jplus.pojo.queryVo.JsjsVo;
 import org.jplus.pojo.queryVo.ZdxsjsVo;
 import org.jplus.pojo.yjssjjx.Yjssjjx;
 import org.jplus.service.*;
+import org.jplus.service.impl.JxcgServiceImpl;
 import org.jplus.utils.DateUtils;
 import org.jplus.utils.GetWorkLoad;
 import org.jplus.utils.GetYear;
@@ -22,7 +22,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.time.Year;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;

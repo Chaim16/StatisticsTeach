@@ -3,7 +3,7 @@ package org.jplus.controller;
 import org.jplus.interceptor.NeedLogin;
 import org.jplus.pojo.Users;
 import org.jplus.pojo.teachingresearchInfo.*;
-import org.jplus.service.JxcgServiceImpl;
+import org.jplus.service.impl.JxcgServiceImpl;
 import org.jplus.service.TjztService;
 import org.jplus.utils.GetWorkLoad;
 import org.jplus.utils.GetYear;

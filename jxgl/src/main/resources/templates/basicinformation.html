@@ -1,117 +1,117 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
+
 <html class="no-js" lang="en" xmlns:th="http://www.thymeleaf.org">
 <!--<![endif]-->
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- 加载bootstrap -->
-    <link rel='stylesheet' href='https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css' />
-    <script src='https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js'></script>
-    <script src='https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <link rel='stylesheet' href='css/bootstrap.min.css'/>
+    <script src='js/jquery.min.js'></script>
+    <script src='js/bootstrap.min.js'></script>
     <!--    加载jq-->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
     <!-- 引用bootstrap及基础样式 -->
     <script src="js/link.js"></script>
-<!--css样式-->
-    <link rel="stylesheet" type="text/css" href="css/basicinformation.css" />
-<!--    输入框验证-->
+    <!--css样式-->
+    <link rel="stylesheet" type="text/css" href="css/basicinformation.css"/>
+    <!--    输入框验证-->
     <script src="js/classroomteaching.js"></script>
     <script src="js/basicinformation.js"></script>
 </head>
 
-<body>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
-    <!-- 头部 -->
-    <div class="toptitle">
-        <span id="title">湖北师范大学教学工作量统计系统</span>
-        <a href="" id="change-password" data-toggle="modal" data-target="#changePasswordModal">修改密码</a>
-    </div>
-    <!-- 修改密码 -->
-    <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                        &times;
-                    </button>
-                    <h5 class="modal-title" id="myModalLabel" style="text-align: center;">
-                        <div>修改密码</div>
-                        <div style="color: #424251;font-size: 12px;margin-top: 2%;">(提示：若密码修改成功后,会跳回登录页面)</div>
-                    </h5>
-                </div>
-                <div class="modal-body">
-                    <form action="/updatepassword" method="post">
-                        <div>
-                            原密码：<input type="password" class="form-control-1 form-control-jub class-name password" placeholder="" name="oldPassword"/>
-                        </div>
-                        <div class="warning unquie">原密码不能为空！</div>
-                        <div>
-                            新密码：<input type="password" class="form-control-1 form-control-jub class-name password" placeholder="" name="newPassword"/>
-                        </div>
-                        <div class="warning unquie">新密码不能为空！</div>
-                        <div>
-                            请确认密码：<input type="password" class="form-control-1 form-control-jub class-number password" placeholder=""
-                                         name="newPassword2" />
-                        </div>
-                        <div class="warning unquie">请确认密码不能为空！</div>
-                        <div class="notnull unquie">新密码与确认密码不一致！</div>
-                        <div class="btn-add">
-                            <button type="submit" class="modify">修改</button>
-                            <button type="button" class="cancel" data-dismiss="modal">取消</button>
-                        </div>
-                    </form>
-                </div>
+<!--[if lt IE 7]>
+<p class="browsehappy">
+    You are using an <strong>outdated</strong> browser. Please
+    <a href="#">upgrade your browser</a> to improve your experience.
+</p>
+<![endif]-->
+<!-- 头部 -->
+<div class="toptitle">
+    <span id="title">湖北师范大学教学工作量统计系统</span>
+    <a href="" id="change-password" data-toggle="modal" data-target="#changePasswordModal">修改密码</a>
+</div>
+<!-- 修改密码 -->
+<div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h5 class="modal-title" id="myModalLabel" style="text-align: center;">
+                    <div>修改密码</div>
+                    <div style="color: #424251;font-size: 12px;margin-top: 2%;">(提示：若密码修改成功后,会跳回登录页面)</div>
+                </h5>
+            </div>
+            <div class="modal-body">
+                <form action="/updatepassword" method="post">
+                    <div>
+                        原密码：<input type="password" class="form-control-1 form-control-jub class-name password"
+                                   placeholder="" name="oldPassword"/>
+                    </div>
+                    <div class="warning unquie">原密码不能为空！</div>
+                    <div>
+                        新密码：<input type="password" class="form-control-1 form-control-jub class-name password"
+                                   placeholder="" name="newPassword"/>
+                    </div>
+                    <div class="warning unquie">新密码不能为空！</div>
+                    <div>
+                        请确认密码：<input type="password" class="form-control-1 form-control-jub class-number password"
+                                     placeholder=""
+                                     name="newPassword2"/>
+                    </div>
+                    <div class="warning unquie">请确认密码不能为空！</div>
+                    <div class="notnull unquie">新密码与确认密码不一致！</div>
+                    <div class="btn-add">
+                        <button type="submit" class="modify">修改</button>
+                        <button type="button" class="cancel" data-dismiss="modal">取消</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    <!-- 左边导航栏 -->
-    <div class="main">
-        <div class="navbar" id="navwrap">
-            <div class="navwarp">
-                <div class="basic-information active">
-                    <a th:href="@{/basicinformation}">教师本年度基本信息</a>
-                </div>
-                <!-- 本科生 -->
-                <div id="bachelor">本科生</div>
-                <ul class="list-group">
-                    <li class="list-group-item"><a th:href="@{/classroomteaching}" >课堂教学</a></li>
-                    <li class="list-group-item"><a th:href="@{/practiceteh}">实践教学</a></li>
-                    <li class="list-group-item"><a th:href="@{/qualityengineering}">质量工程建设</a></li>
-                    <li class="list-group-item"><a th:href="@{/teachingresearch}">教学研究</a></li>
-                    <li class="list-group-item"><a th:href="@{/know}">教学竞赛获奖</a></li>
-                    <li class="list-group-item"><a th:href="@{/other}">其它教育教学活动</a></li>
-                    <li>
-                            <button type="button" id="Submitbtn1" data-toggle="modal" data-target="#Submission1">提交本科生教学工作量</button>
-                    </li>
-                </ul>
-              <!--  &lt;!&ndash; 研究生 &ndash;&gt;
-                <div id="postgraduate">研究生</div>
-                <ul class="list-group">
-                    <li class="list-group-item"><a th:href="@{/graduateclass}">课堂教学</a></li>
-                    <li class="list-group-item"><a th:href="@{/graduatepractice}">实践教学</a></li>
-                    <li class="list-group-item"><a th:href="@{/graduateconstruction}">教学基本建设与学科建设</a></li>
-                    <li class="list-group-item"><a th:href="@{/graduateprogram}">教学研究项目</a></li>
-                    <li class="list-group-item"><a th:href="@{/masterKnow}">指导研究生竞赛获奖</a></li>
-                    <li class="list-group-item"><a th:href="@{/masterOther}">其它工作</a></li>
-                    <li>
-                        <button type="button" id="Submitbtn2" data-toggle="modal" data-target="#Submission2">提交研究生教学工作量</button>
-                    </li>
-                </ul>
-                &lt;!&ndash; 提交按钮 &ndash;&gt;
-            </div>-->
+</div>
+<!-- 左边导航栏 -->
+<div class="main">
+    <div class="navbar" id="navwrap">
+        <div class="navwarp">
+            <div class="basic-information active">
+                <a th:href="@{/basicinformation}">教师本年度基本信息</a>
+            </div>
+            <!-- 本科生 -->
+            <div id="bachelor">本科生</div>
+            <ul class="list-group">
+                <li class="list-group-item"><a th:href="@{/classroomteaching}">课堂教学</a></li>
+                <li class="list-group-item"><a th:href="@{/practiceteh}">实践教学</a></li>
+                <li class="list-group-item"><a th:href="@{/qualityengineering}">质量工程建设</a></li>
+                <li class="list-group-item"><a th:href="@{/teachingresearch}">教学研究</a></li>
+                <li class="list-group-item"><a th:href="@{/know}">教学竞赛获奖</a></li>
+                <li class="list-group-item"><a th:href="@{/other}">其它教育教学活动</a></li>
+                <li>
+                    <button type="button" id="Submitbtn1" data-toggle="modal" data-target="#Submission1">提交本科生教学工作量
+                    </button>
+                </li>
+            </ul>
+            <!--  &lt;!&ndash; 研究生 &ndash;&gt;
+              <div id="postgraduate">研究生</div>
+              <ul class="list-group">
+                  <li class="list-group-item"><a th:href="@{/graduateclass}">课堂教学</a></li>
+                  <li class="list-group-item"><a th:href="@{/graduatepractice}">实践教学</a></li>
+                  <li class="list-group-item"><a th:href="@{/graduateconstruction}">教学基本建设与学科建设</a></li>
+                  <li class="list-group-item"><a th:href="@{/graduateprogram}">教学研究项目</a></li>
+                  <li class="list-group-item"><a th:href="@{/masterKnow}">指导研究生竞赛获奖</a></li>
+                  <li class="list-group-item"><a th:href="@{/masterOther}">其它工作</a></li>
+                  <li>
+                      <button type="button" id="Submitbtn2" data-toggle="modal" data-target="#Submission2">提交研究生教学工作量</button>
+                  </li>
+              </ul>
+              &lt;!&ndash; 提交按钮 &ndash;&gt;
+          </div>-->
         </div>
         <!-- 模态框-本科生是否提交 -->
         <div class="modal fade" id="Submission1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -124,31 +124,33 @@
                             <div style=" text-indent: 2em;">本年度本科生工作量提交以后，就不能修改。如果提交后需要修改，请让分管本科生的教学秘书做撤回操作。</div>
                         </div>
                         <div class="btn-submitted">
-                            <a th:href="@{/submitBks}"><button type="button" id="submitted1">继续提交</button></a>
+                            <a th:href="@{/submitBks}">
+                                <button type="button" id="submitted1">继续提交</button>
+                            </a>
                             <button type="button" id="notsubmitted1" data-dismiss="modal">不提交</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-<!--        &lt;!&ndash; 模态框-研究生是否提交 &ndash;&gt;
-        <div class="modal fade" id="Submission2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-             aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="tips">
-                            <div>提示：</div>
-                            <div style=" text-indent: 2em;">本年度研究生工作量提交以后，就不能修改。如果提交后需要修改，请让分管研究生的教学秘书做撤回操作。</div>
-                        </div>
-                        <div class="btn-submitted">
-                            <a th:href="@{/submitYjs}"><button type="button" id="submitted2">继续提交</button></a>
-                            <button type="button" id="notsubmitted2" data-dismiss="modal">不提交</button>
+        <!--        &lt;!&ndash; 模态框-研究生是否提交 &ndash;&gt;
+                <div class="modal fade" id="Submission2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="tips">
+                                    <div>提示：</div>
+                                    <div style=" text-indent: 2em;">本年度研究生工作量提交以后，就不能修改。如果提交后需要修改，请让分管研究生的教学秘书做撤回操作。</div>
+                                </div>
+                                <div class="btn-submitted">
+                                    <a th:href="@{/submitYjs}"><button type="button" id="submitted2">继续提交</button></a>
+                                    <button type="button" id="notsubmitted2" data-dismiss="modal">不提交</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>-->
+                </div>-->
 
     </div>
 
@@ -157,21 +159,18 @@
     <div class="informationwarp" id="informationwarp">
 
         <div class="information-title">教师本年度基本信息</div>
-<!--        <span th:if="${basisInfo==null}">-->
         <span th:if="${hidden==0} and ${basisInfo==null}">
     <div class="alert alert-danger">提示：每年录入工作量之前，必须先更新教师本年度基本信息，并保存（即使基本信息无变化，也要单击保存）。</div>
 </span>
-
         <form id="update" th:action="@{/updateBasisInfo}" method="post" th:object="${jbxxAccpet}">
-        <!-- 保存按钮 -->
+            <!-- 保存按钮 -->
             <div class="year-warp">
                 <div class="year">
-<!--                    <span class="passwordtip" style="letter-spacing: 30px;">年</span>度-->
-<!--                    <span class="teather-name" th:text="${Nd}"></span>-->
-                        <span class="passwordtip" style="letter-spacing: 30px;">年度</span>
-                        <select id="selectYear" name="xqnd" class="teather-name">
-                            <option th:each="year:${years}" th:selected="${xqnd} == ${year}" th:value="${year}" th:text="${year}"></option>
-                        </select>
+                    <span class="passwordtip" style="letter-spacing: 30px;">年度</span>
+                    <select id="selectYear" name="xqnd" class="teather-name">
+                        <option th:each="year:${years}" th:selected="${xqnd == year}" th:value="${year}"
+                                th:text="${year}"></option>
+                    </select>
                 </div>
                 <span th:if="${hidden==0}">
                     <button type="submit" id="save">保存</button>
@@ -181,46 +180,49 @@
                 <input hidden th:name="gh" th:value="${user.gh}">
             </div>
 
-        <div class="informaction">
-            <!-- 表单信息 -->
-            <ul>
-                <li>
-                    <span class="passwordtip" style="letter-spacing: 30px;">姓</span>名:<span
-                        class="teather-name" th:text="${user.uname}"></span>
-                </li>
+            <div class="informaction">
+                <!-- 表单信息 -->
+                <ul>
+                    <li>
+                        <span class="passwordtip" style="letter-spacing: 30px;">姓</span>名:<span
+                            class="teather-name" th:text="${user.uname}"></span>
+                    </li>
 
-                <li class="ul-right">
+                    <li class="ul-right">
                         院系:<select th:name="yxbm">
-                            <div th:if="${basisInfo!=null && basisInfo.yxbm!=null}">
-                                <option th:each="yxmcType:${yxType}" th:selected="${yxmcType.yxbm}==${basisInfo.yxbm.yxbm}"
-                                        th:value="${yxmcType.yxbm}" th:text="${yxmcType.yxmc}" th:name="yxbm">
-                                </option>
-                            </div>
-                            <div th:unless="${basisInfo!=null && basisInfo.yxbm!=null}">
-                                <option th:value="1" th:text="--请选择--" th:name="yxbm"></option>
-                                <option th:each="yxmcType:${yxType}" th:value="${yxmcType.yxbm}" th:text="${yxmcType.yxmc}" th:name="yxbm">
-                                </option>
-                            </div>
-                        </select>
-                </li>
-                <li>
+                        <div th:if="${basisInfo!=null && basisInfo.yxbm!=null}">
+                            <option th:each="yxmcType:${yxType}" th:selected="${yxmcType.yxbm}==${basisInfo.yxbm.yxbm}"
+                                    th:value="${yxmcType.yxbm}" th:text="${yxmcType.yxmc}" th:name="yxbm">
+                            </option>
+                        </div>
+                        <div th:unless="${basisInfo!=null && basisInfo.yxbm!=null}">
+                            <option th:value="1" th:text="--请选择--" th:name="yxbm"></option>
+                            <option th:each="yxmcType:${yxType}" th:value="${yxmcType.yxbm}" th:text="${yxmcType.yxmc}"
+                                    th:name="yxbm">
+                            </option>
+                        </div>
+                    </select>
+                    </li>
+                    <li>
                     <span class="passwordtip" style="letter-spacing: 30px;">
                         职</span>务:
                         <select th:name="zwbm">
                             <div th:if="${basisInfo!=null && basisInfo.zwbm!=null}">
-                                <option th:each="zwbmType:${zwType}" th:selected="${zwbmType.zwbm}==${basisInfo.zwbm.zwbm}"
+                                <option th:each="zwbmType:${zwType}"
+                                        th:selected="${zwbmType.zwbm}==${basisInfo.zwbm.zwbm}"
                                         th:value="${zwbmType.zwbm}" th:text="${zwbmType.zwmc}" th:name="zwbm">
                                 </option>
                             </div>
                             <div th:unless="${basisInfo!=null && basisInfo.zwbm!=null}">
                                 <option th:value="1" th:text="--请选择--" th:name="zwbm"></option>
-                                <option th:each="zwbmType:${zwType}" th:value="${zwbmType.zwbm}" th:text="${zwbmType.zwmc}" th:name="zwbm">
+                                <option th:each="zwbmType:${zwType}" th:value="${zwbmType.zwbm}"
+                                        th:text="${zwbmType.zwmc}" th:name="zwbm">
                                 </option>
                             </div>
 
                         </select>
-                </li>
-                <li class="ul-right">
+                    </li>
+                    <li class="ul-right">
                         职称:<select name="zcbm">
                         <div th:if="${basisInfo!=null && basisInfo.zcbm!=null}">
                             <option th:each="zcbmType:${zcType}" th:selected="${zcbmType.zcbm}==${basisInfo.zcbm.zcbm}"
@@ -229,82 +231,89 @@
                         </div>
                         <div th:unless="${basisInfo!=null && basisInfo.zcbm!=null}">
                             <option th:value="1" th:text="--请选择--" th:name="zcbm"></option>
-                        <option th:each="zcbmType:${zcType}" th:value="${zcbmType.zcbm}" th:text="${zcbmType.zcmc}" th:name="zcbm">
-                        </option>
+                            <option th:each="zcbmType:${zcType}" th:value="${zcbmType.zcbm}" th:text="${zcbmType.zcmc}"
+                                    th:name="zcbm">
+                            </option>
                         </div>
-                </select>
-                </li>
-                <li class="post">
+                    </select>
+                    </li>
+                    <li class="post">
                         岗位类型:<select name="gwlxbm">
-                    <div th:if="${basisInfo!=null && basisInfo.gwlxbm!=null}">
-                        <option th:each="gwlxbmType:${gwlxType}" th:selected="${gwlxbmType.gwlxbm}==${basisInfo.gwlxbm.gwlxbm}"
-                                th:value="${gwlxbmType.gwlxbm}" th:text="${gwlxbmType.gwlxmc}" th:name="gwlxbm"></option>
-                    </div>
-                    <div th:unless="${basisInfo!=null && basisInfo.gwlxbm!=null}">
-                        <option th:value="1" th:text="--请选择--" th:name="gwlxbm"></option>
-                        <option th:each="gwlxbmType:${gwlxType}" th:value="${gwlxbmType.gwlxbm}" th:text="${gwlxbmType.gwlxmc}" th:name="gwlxbm"></option>
-                    </div>
-                </select>
+                        <div th:if="${basisInfo!=null && basisInfo.gwlxbm!=null}">
+                            <option th:each="gwlxbmType:${gwlxType}"
+                                    th:selected="${gwlxbmType.gwlxbm}==${basisInfo.gwlxbm.gwlxbm}"
+                                    th:value="${gwlxbmType.gwlxbm}" th:text="${gwlxbmType.gwlxmc}"
+                                    th:name="gwlxbm"></option>
+                        </div>
+                        <div th:unless="${basisInfo!=null && basisInfo.gwlxbm!=null}">
+                            <option th:value="1" th:text="--请选择--" th:name="gwlxbm"></option>
+                            <option th:each="gwlxbmType:${gwlxType}" th:value="${gwlxbmType.gwlxbm}"
+                                    th:text="${gwlxbmType.gwlxmc}" th:name="gwlxbm"></option>
+                        </div>
+                    </select>
 
-                </li>
-                <li class="entry">
-                    <div th:name="sfxrz">
-                        是否新入职:
-                        <span th:if="${basisInfo!=null && basisInfo.sfxrz!=null}">
-                            <input type="radio" th:name="sfxrz" th:value="${0}" class="entry-chose"th:checked="${basisInfo.sfxrz}==0" />是
+                    </li>
+                    <li class="entry">
+                        <div th:name="sfxrz">
+                            是否新入职:
+                            <span th:if="${basisInfo!=null && basisInfo.sfxrz!=null}">
+                            <input type="radio" th:name="sfxrz" th:value="${0}" class="entry-chose"
+                                   th:checked="${basisInfo.sfxrz}==0"/>是
                             <input type="radio" th:name="sfxrz" th:value="${1}" th:checked="${basisInfo.sfxrz}==1"/>否
                         </span>
-                        <span th:unless="${basisInfo!=null && basisInfo.sfxrz!=null}">
-                            <input type="radio" th:name="sfxrz" th:value="${0}" class="entry-chose" />是
+                            <span th:unless="${basisInfo!=null && basisInfo.sfxrz!=null}">
+                            <input type="radio" th:name="sfxrz" th:value="${0}" class="entry-chose"/>是
                             <input type="radio" th:name="sfxrz" th:value="${1}" checked="checked"/>否
                         </span>
-                    </div>
-                </li>
-            </ul>
-            <!-- 工作量信息显示 -->
-            <div class="workload-warp">
-                <div id="ratedworkload">教学额定工作量:
-                    <span th:if="${basisInfo!=null && basisInfo.edgzl!=null}">
+                        </div>
+                    </li>
+                </ul>
+                <!-- 工作量信息显示 -->
+                <div class="workload-warp">
+                    <div id="ratedworkload">教学额定工作量:
+                        <span th:if="${basisInfo!=null && basisInfo.edgzl!=null}">
                         <span th:text="${basisInfo.edgzl}"></span>
                     </span>
-                </div>
-                <div id="actualworkload">实际总工作量:
-                    <span th:if="${Zgzl!=null}">
+                    </div>
+                    <div id="actualworkload">实际总工作量:
+                        <span th:if="${Zgzl!=null}">
                         <span th:text="${Zgzl}"></span>
                     </span>
-                </div>
-                <div id="minimumworkload">本科生授课最低工作量:
-                    <span th:if="${basisInfo!=null && basisInfo.bkszdsk!=null}">
+                    </div>
+                    <div id="minimumworkload">本科生授课最低工作量:
+                        <span th:if="${basisInfo!=null && basisInfo.bkszdsk!=null}">
                         <span th:text="${basisInfo.bkszdsk}"></span>
                     </span>
-                </div>
-                <div id="undergraduateworkload">其中：本科生授课工作量:<span th:if="${bkszdgzl!=null}">
+                    </div>
+                    <div id="undergraduateworkload">其中：本科生授课工作量:<span th:if="${bkszdgzl!=null}">
                     <span th:text="${bkszdgzl}"></span>
                 </span>
+                    </div>
                 </div>
             </div>
-        </div>
         </form>
     </div>
-    <div class="footer" style="width:100%;min-width:800px;height:35px;text-align: center;position: fixed;bottom: 0;font-size: 12px;color: #BDBDAE;">
-        <div style="height: 16px;line-height: 16px;font-size: 12px;"><span style="font-family:arial;">&copy; </span>2019<span id="newyear"></span>湖北师范大学(www.hbnu.edu.cn).All rights reserved.</div>
+    <div class="footer"
+         style="width:100%;min-width:800px;height:35px;text-align: center;position: fixed;bottom: 0;font-size: 12px;color: #BDBDAE;">
+        <div style="height: 16px;line-height: 16px;font-size: 12px;"><span style="font-family:arial;">&copy; </span>2019<span
+                id="newyear"></span>湖北师范大学(www.hbnu.edu.cn).All rights reserved.
+        </div>
         <div style="height: 16px;line-height: 16px;font-size: 12px;">技术支持：Jplus实验室</div>
     </div>
     <script>
         var myDate = new Date();
         var tYear = myDate.getFullYear();
-        var now=2019;
+        var now = 2019;
         var oDate1 = new Date(tYear);
         var oDate2 = new Date(now);
-        if(oDate1>oDate2){
-            document.getElementById("newyear").innerHTML="-"+tYear;
+        if (oDate1 > oDate2) {
+            document.getElementById("newyear").innerHTML = "-" + tYear;
         }
         var update = document.querySelector("#update");
         var years = document.querySelector("#years");
-        years.onchange = function(){
+        years.onchange = function () {
             update.submit();
         }
     </script>
-</body>
-
+</div>
 </html>

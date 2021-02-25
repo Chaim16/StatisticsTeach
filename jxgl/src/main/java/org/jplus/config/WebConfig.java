@@ -17,6 +17,9 @@ public class WebConfig implements WebMvcConfigurer{
     @Autowired
     private LoginInterceptor loginInterceptor;
 
+    /**
+     * 用户参数类型解析器
+     */
     @Autowired
     private UserArgumentResolver userArgumentResolver;
 

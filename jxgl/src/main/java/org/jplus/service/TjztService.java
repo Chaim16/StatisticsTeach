@@ -2,7 +2,6 @@ package org.jplus.service;
 
 import org.jplus.pojo.Tjzt.Tjzt;
 
-import java.sql.Date;
 import java.sql.Timestamp;
 
 
